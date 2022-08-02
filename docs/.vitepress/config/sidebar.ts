@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-02 10:28:13
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-02 16:58:42
+ * @LastEditTime: 2022-08-02 17:53:55
  */
 import { DefaultTheme } from "vitepress"
 const sidebar: DefaultTheme.Config['sidebar'] = {
@@ -33,6 +33,10 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
             // collapsed: true,
             items: [
                 {
+                    text: "2022/07/28 - npm & pnpm",
+                    link: '/daily/note/20220728'
+                },
+                {
                     text: "2022/07/22 - 2022掘金开发者大会笔记1",
                     link: '/daily/note/20220722-01'
                 },
@@ -45,8 +49,28 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
                     link: '/daily/note/20220722-03'
                 },
                 {
+                    text: "2022/07/20 - 赶紧养成用js新特性的习惯",
+                    link: '/daily/note/20220720-es'
+                },
+                {
+                    text: "2022/07/08 - v3.2 巧用单文件组件的style特性",
+                    link: '/daily/note/20220708'
+                },
+                {
+                    text: "2022/06/01 - reduce黑魔法，嘿嘿",
+                    link: '/daily/note/20220601-reduce'
+                },
+                {
+                    text: "2022/05/31 - 一个负优化",
+                    link: '/daily/note/20220531'
+                },
+                {
                     text: "2021/01/24 - 移动1像素",
                     link: '/daily/note/20210124-01'
+                },
+                {
+                    text: "2021/01/24 - BFC",
+                    link: '/daily/note/20210124-bfc'
                 },
             ]
         },
@@ -61,6 +85,25 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
                 {
                     text: "浅入浅出ts - 数据类型",
                     link: '/study/ts/ts-01'
+                },
+            ]
+        },
+        {
+            text: 'css',
+            collapsible: true,
+            // collapsed: true,
+            items: [
+                {
+                    text: "rem",
+                    link: '/study/css/rem'
+                },
+                {
+                    text: "grid",
+                    link: '/study/css/grid'
+                },
+                {
+                    text: "盒模型",
+                    link: '/study/css/box'
                 },
             ]
         },
