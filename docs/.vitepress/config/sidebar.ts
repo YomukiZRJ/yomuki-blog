@@ -3,11 +3,22 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-02 10:28:13
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-02 17:53:55
+ * @LastEditTime: 2022-08-03 22:18:24
  */
 import { DefaultTheme } from "vitepress"
 const sidebar: DefaultTheme.Config['sidebar'] = {
     '/daily/': [
+        {
+            text: '日记',
+            collapsible: true,
+            // collapsed: true,
+            items: [
+                {
+                    text: "20220803",
+                    link: '/daily/diary/20220803'
+                },
+            ]
+        },
         {
             text: '记录',
             collapsible: true,
@@ -33,6 +44,10 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
             // collapsed: true,
             items: [
                 {
+                    text: "2022/08/03 - 如何判断两个对象是否相等",
+                    link: '/daily/note/20220803'
+                },
+                {
                     text: "2022/07/28 - npm & pnpm",
                     link: '/daily/note/20220728'
                 },
@@ -57,12 +72,32 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
                     link: '/daily/note/20220708'
                 },
                 {
+                    text: "2022/06/27 - CSS方法论",
+                    link: '/daily/note/20220627'
+                },
+                {
+                    text: "2022/06/06 - 虚拟DOM和diff算法",
+                    link: '/daily/note/20220606'
+                },
+                {
                     text: "2022/06/01 - reduce黑魔法，嘿嘿",
                     link: '/daily/note/20220601-reduce'
                 },
                 {
+                    text: "2022/05/31 - 路由的hash和history",
+                    link: '/daily/note/20220531-2'
+                },
+                {
                     text: "2022/05/31 - 一个负优化",
                     link: '/daily/note/20220531'
+                },
+                {
+                    text: "2022/05/17 - 在线咨询实现方案",
+                    link: '/daily/note/20220517'
+                },
+                {
+                    text: "2022/05/13 - 不明确最终像素比的情况下的自适应大屏解决方案",
+                    link: '/daily/note/20220513'
                 },
                 {
                     text: "2021/01/24 - 移动1像素",
