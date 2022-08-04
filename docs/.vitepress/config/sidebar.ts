@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-02 10:28:13
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-03 22:18:24
+ * @LastEditTime: 2022-08-04 20:26:53
  */
 import { DefaultTheme } from "vitepress"
 const sidebar: DefaultTheme.Config['sidebar'] = {
@@ -13,6 +13,10 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsible: true,
             // collapsed: true,
             items: [
+                {
+                    text: "20220804",
+                    link: '/daily/diary/20220804'
+                },
                 {
                     text: "20220803",
                     link: '/daily/diary/20220803'
@@ -24,6 +28,10 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsible: true,
             // collapsed: true,
             items: [
+                {
+                    text: "2022/08/03 - vue3自定义指令",
+                    link: '/daily/record/vue3/20220804'
+                },
                 {
                     text: "2022/07/28 - axios",
                     link: '/daily/record/20220728/'
