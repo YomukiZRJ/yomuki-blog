@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-05 17:32:36
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-05 17:32:43
+ * @LastEditTime: 2022-08-06 09:23:33
  */
 export default [
     {
@@ -34,6 +34,10 @@ export default [
                 text: "盒模型",
                 link: '/study/css/box'
             },
+            {
+                text: "移动1像素",
+                link: '/study/css/mobile1px'
+            },
         ]
     },
     {
@@ -48,6 +52,21 @@ export default [
             {
                 text: "vueuse - 元素",
                 link: '/study/vueuse-01/'
+            },
+        ]
+    },
+    {
+        text: '八股文sos - 我也没想到真有人照着问',
+        collapsible: true,
+        // collapsed: true,
+        items: [
+            {
+                text: "浏览器",
+                link: '/study/eightPpartEssay/browser'
+            },
+            {
+                text: "css",
+                link: '/study/eightPpartEssay/css'
             },
         ]
     },
