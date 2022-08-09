@@ -59,6 +59,10 @@ export default [{
     // collapsed: true,
     items: [
         {
+            text: "2022/08/09 - vite+ts记录",
+            link: '/daily/note/20220809-2'
+        },
+        {
             text: "2022/08/09 - css生成粒子动画",
             link: '/daily/note/20220809'
         },
