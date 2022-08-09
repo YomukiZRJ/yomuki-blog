@@ -5,6 +5,10 @@ export default [{
     // collapsed: true,
     items: [
         {
+            text: "20220809",
+            link: '/daily/diary/20220809'
+        },
+        {
             text: "20220808",
             link: '/daily/diary/20220808'
         },
@@ -54,6 +58,10 @@ export default [{
     collapsible: true,
     // collapsed: true,
     items: [
+        {
+            text: "2022/08/09 - css生成粒子动画",
+            link: '/daily/note/20220809'
+        },
         {
             text: "2022/08/03 - 如何判断两个对象是否相等",
             link: '/daily/note/20220803'
