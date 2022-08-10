@@ -3,9 +3,20 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-05 17:32:36
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-06 09:23:33
+ * @LastEditTime: 2022-08-10 09:13:52
  */
 export default [
+    {
+        text: '构建',
+        collapsible: true,
+        // collapsed: true,
+        items: [
+            {
+                text: "vite+ts记录",
+                link: '/study/structure/vite/vite-ts'
+            },
+        ]
+    },
     {
         text: 'ttttts',
         collapsible: true,
@@ -56,7 +67,7 @@ export default [
         ]
     },
     {
-        text: '八股文sos - 我也没想到真有人照着问',
+        text: '八股文sos',
         collapsible: true,
         // collapsed: true,
         items: [
