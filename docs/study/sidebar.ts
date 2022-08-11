@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-05 17:32:36
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-10 09:13:52
+ * @LastEditTime: 2022-08-11 11:01:22
  */
 export default [
     {
@@ -14,6 +14,17 @@ export default [
             {
                 text: "vite+ts记录",
                 link: '/study/structure/vite/vite-ts'
+            },
+        ]
+    },
+    {
+        text: 'vvvvue',
+        collapsible: true,
+        // collapsed: true,
+        items: [
+            {
+                text: "路由懒懒懒加载（按需载入）",
+                link: '/study/vue/route-lazy-load'
             },
         ]
     },
