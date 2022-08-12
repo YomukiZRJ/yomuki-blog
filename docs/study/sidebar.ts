@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-05 17:32:36
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-11 11:01:22
+ * @LastEditTime: 2022-08-12 21:05:37
  */
 export default [
     {
@@ -89,6 +89,10 @@ export default [
             {
                 text: "css",
                 link: '/study/eightPpartEssay/css'
+            },
+            {
+                text: "js",
+                link: '/study/eightPpartEssay/js'
             },
         ]
     },

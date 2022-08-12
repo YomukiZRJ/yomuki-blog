@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-05 20:43:25
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-06 08:53:30
+ * @LastEditTime: 2022-08-12 15:53:55
 -->
 # css相关
 ## CSS选择器及优先级
@@ -63,6 +63,17 @@
 - flex布局 display:flex;justify-content:center;(主轴)align-items:center;（交叉轴）
 - grid布局 display:grid;justify-content:center;(主轴)align-items:center;（交叉轴）
 ## 隐藏页面元素
-- opacity：0；不改变元素布局，依旧可触发点击等事件。
+- opacity：0；不改变元素布局，依旧可触发点击等事件。在单独图层上会触发重绘，反之则是回流和重绘
 - visibility：hidden；不改变元素布局，不会触发事件，在文档中保留原始布局，所以只触发重绘
 - display：none；影响布局，触发回流和重绘
+## display
+
+## [实现三角形](https://juejin.cn/post/6950081305560219679)
+- border大法
+- 用 linear-gradient 线性渐变
+- transform: rotate + overflow:hidden 
+- clip-path
+### 如何添加边框？
+- 用clip-path切个边框出来叠上去
+- 在其父元素上用filter的drop-shadow
+- 在画个大三角，小的盖大的上头
