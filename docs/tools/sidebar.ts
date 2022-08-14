@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-05 17:33:17
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-05 17:33:29
+ * @LastEditTime: 2022-08-14 11:03:51
  */
 export default [
     {
@@ -16,6 +16,10 @@ export default [
             {
                 text: "css库",
                 link: '/tools/css'
+            },
+            {
+                text: "架构库",
+                link: '/tools/framework'
             },
             {
                 text: "生成工具",

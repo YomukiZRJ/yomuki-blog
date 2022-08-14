@@ -83,10 +83,6 @@
 ### webpack
 
 - portfinder 寻找空闲端口
-### 测试
-
-- [Jest](https://github.com/facebook/jest) [中文](https://www.jestjs.cn/) 
-- Mocha [中文](https://mochajs.cn/) 运行在nodejs的
 ### 服务器渲染
 
 - [SSR](https://github.com/zhangyuang/ssr) 支持v23&Rn

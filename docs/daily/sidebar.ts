@@ -5,6 +5,10 @@ export default [{
     // collapsed: true,
     items: [
         {
+            text: "20220814",
+            link: '/daily/diary/20220814'
+        },
+        {
             text: "20220812",
             link: '/daily/diary/20220812'
         },
@@ -70,6 +74,10 @@ export default [{
     collapsible: true,
     // collapsed: true,
     items: [
+        {
+            text: "pnpm 配置",
+            link: '/daily/note/20220814'
+        },
         {
             text: "2022/08/09 - css生成粒子动画",
             link: '/daily/note/20220809'
