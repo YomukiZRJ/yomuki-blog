@@ -5,6 +5,14 @@ export default [{
     // collapsed: true,
     items: [
         {
+            text: "20220817",
+            link: '/daily/diary/20220817'
+        },
+        {
+            text: "20220816",
+            link: '/daily/diary/20220816'
+        },
+        {
             text: "20220815",
             link: '/daily/diary/20220815'
         },
@@ -51,26 +59,42 @@ export default [{
     ]
 },
 {
-    text: '记录',
+    text: '工作会用放前面点方便c+v',
     collapsible: true,
     // collapsed: true,
     items: [
         {
-            text: "2022/08/03 - vue3自定义指令",
+            text: "pnpm",
+            link: '/daily/record/pnpm'
+        },
+        {
+            text: "webpack",
+            link: '/daily/record/webpack'
+        },
+        {
+            text: "vue3自定义指令",
             link: '/daily/record/vue3/20220804'
         },
         {
-            text: "2022/07/28 - axios",
-            link: '/daily/record/20220728/'
+            text: "axios-ts",
+            link: '/daily/record/ts/axios'
         },
         {
-            text: "2022/06/09 - EventBus",
-            link: '/daily/record/20220609-eventBus'
+            text: "EventBus",
+            link: '/daily/record/js/eventBus'
         },
         {
-            text: "2022/06/09 - rem.js",
-            link: '/daily/record/20220609-rem.js'
-        }
+            text: "rem",
+            link: '/daily/record/js/rem'
+        },
+        {
+            text: "样式兼容",
+            link: '/daily/record/compatible/compatible-style'
+        },
+        {
+            text: "环境配置问题",
+            link: '/daily/record/error/configure-error'
+        },
     ]
 },
 {
@@ -78,10 +102,6 @@ export default [{
     collapsible: true,
     // collapsed: true,
     items: [
-        {
-            text: "pnpm 配置",
-            link: '/daily/note/20220814'
-        },
         {
             text: "2022/08/09 - css生成粒子动画",
             link: '/daily/note/20220809'

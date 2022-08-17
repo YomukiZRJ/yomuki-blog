@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-02 15:27:44
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-15 17:19:23
+ * @LastEditTime: 2022-08-17 09:33:14
 -->
 # Hi,这里是一些学习笔记
 - 🙉 今天不学习，明天变垃圾
@@ -34,6 +34,7 @@
 - [Vite 是怎样利用 Esbuild 来提升性能的 ？](https://juejin.cn/post/7129802255120728100)
 ### webpack
 - [webpack5打包资源优化](https://juejin.cn/post/7112627912632696845)
+- [基于webpack4的构建效率优化](https://juejin.cn/post/7127098334900125710)
 ## react
 - [10个实用的 React Hooks 库](https://juejin.cn/post/7112256252868034591)
 ## 调试
@@ -41,6 +42,12 @@
 - [调试js代码](https://juejin.cn/post/7030584939020042254)
 ## 开源项目
 - [10 个 GitHub 上的前端高仿项目](https://juejin.cn/post/7124909032808120328)
+### 数据可视化
+- [GoView](https://gitee.com/MTrun/go-view) 低代码数据可视化开发。vue3 + ts + vite + echarts
+- [vue-big-screen](https://gitee.com/MTrun/big-screen-vue-datav) vue2 + datav + echarts
+- [vue-big-screen-plugin](https://gitee.com/MTrun/vue-big-screen-plugin) vue3 + ts + datav + echarts + tsx
+- [datav](https://github.com/DataV-Team/DataV) vue2 组件库 但好像没有在维护了？但可以看看源码
+- [飞鱼](https://github.com/CloudWise-OpenSource/FlyFish) 低代码数据可视化开发。react 
 ## 学习记录😌 
 - 源码共读
   - [【若川视野 x 源码共读】第37期 | create-vite 源码记录](https://juejin.cn/post/7131998239502368776)
