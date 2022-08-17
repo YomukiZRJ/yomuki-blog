@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-05 17:32:36
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-12 21:05:37
+ * @LastEditTime: 2022-08-17 14:17:35
  */
 export default [
     {
@@ -14,6 +14,14 @@ export default [
             {
                 text: "vite+ts记录",
                 link: '/study/structure/vite/vite-ts'
+            },
+            {
+                text: "webpack5配置记录",
+                link: '/study/structure/webpack/webpack5'
+            },
+            {
+                text: "webpack构建优化",
+                link: '/study/structure/webpack/build-optimization'
             },
         ]
     },

@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-17 09:50:13
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-17 09:50:30
+ * @LastEditTime: 2022-08-17 16:10:59
 -->
 # webpack随手记
 ## hash
@@ -14,20 +14,24 @@
 - contenthash
   - 根据文件内容创建。当文件内容发生变化时，contenthash发生变化
 ## 插件
+### 开发插件
 - html-webpack-plugin HTML打包 引入资源
 - copy-webpack-plugin 静态资源复制 
-- vue-loader/dist/index 定义过的其它规则复制并应用到 .vue 文件里相应语言 
-- case-sensitive-paths-webpack-plugin  路径强制大小写 
+- vue-loader/dist/index 定义过的其它规则复制并应用到 .vue 文件里相应语言
+- DefinePlugin 编译时配置全局变量 webpack5内置
+### 规范插件
+ - case-sensitive-paths-webpack-plugin  路径强制大小写 
 - eslint-webpack-plugin
+### 分析插件
 - duplicate-package-checker-webpack-plugin 检测是否引入了一个包多个版本
 - progress-bar-webpack-plugin 进度条 
-- terser-webpack-plugin 处理 js 的压缩和混淆，移除不需要的函数
-- webpack-bundle-analyzer 检测打包出来的体积
-- compression-webpack-plugin gzip压缩 
-- DefinePlugin 编译时配置全局变量 webpack5内置
-- optimize-css-assets-webpack-plugin 重复的css可以快速去重
-## 插件是如何实现的
-这不是我一个菜鸟可以了解的
+- webpack-bundle-analyzer 构建体积分析 - 检测打包出来的体积
+- speed-measure-webpack-plugin 构建速度分析 - 分析总打包时间，各阶段loader打包耗时，并输出分析文件
+### 优化插件
+- terser-webpack-plugin 体积优化 - 处理 js 的压缩和混淆，移除不需要的函数
+- compression-webpack-plugin 体积优化 - gzip压缩 
+- optimize-css-assets-webpack-plugin 体积优化 - 重复的css可以快速去重
+- hard-source-webpack-plugin 模块缓存 - 为模块提供中间缓存 （webpack5内置[模块缓存](https://webpack.js.org/configuration/cache/#root)了）
 ## loader
 - babel-loader
 - style-loader   和vue-style-loader冲突
@@ -37,6 +41,7 @@
 - less-loader postcss-loader
 - thread-loader 多进程打包
 - file-loader url-loader  webpack5内置了asset了
+- [esbuild-loader](https://github.com/privatenumber/esbuild-loader) 代替babel-loader ts-loader
 ## 性能优化
 - 压缩代码。删除注释 压缩jscss
 - CDN加速 

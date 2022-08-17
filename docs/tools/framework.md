@@ -3,13 +3,15 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-14 11:02:32
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-15 11:12:05
+ * @LastEditTime: 2022-08-17 17:33:39
 -->
 # 架构库
 ## 包管理器
 - [pnpm](https://www.pnpm.cn/)
 ## 脚手架
+- [commander](https://www.npmjs.com/package/commander) nodejs命令行
 - [prompts](https://www.npmjs.com/package/prompts) 美观的cli交互页
+- [Inquirer](https://github.com/SBoudrias/Inquirer.js/) 交互命令行
 - [minimist](https://www.npmjs.com/package/minimist) 命令行参数解析
 - [kolorist](https://www.npmjs.com/package/kolorist) 标准色
 - [kleur](https://github.com/lukeed/kleur)  用 ANSI 颜色格式化终端文本的 Node.js 库
