@@ -5,6 +5,10 @@ export default [{
     // collapsed: true,
     items: [
         {
+            text: "20220822",
+            link: '/daily/diary/20220822'
+        },
+        {
             text: "20220819",
             link: '/daily/diary/20220819'
         },
@@ -114,6 +118,10 @@ export default [{
     collapsible: true,
     // collapsed: true,
     items: [
+        {
+            text: "工作随笔：关于要分别打包mgop和axios情况下的构建",
+            link: '/daily/note/20220822'
+        },
         {
             text: "2022/08/09 - css生成粒子动画",
             link: '/daily/note/20220809'

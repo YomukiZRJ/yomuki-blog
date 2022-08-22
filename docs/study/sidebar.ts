@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-05 17:32:36
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-17 14:17:35
+ * @LastEditTime: 2022-08-22 13:18:56
  */
 export default [
     {
@@ -52,6 +52,10 @@ export default [
         collapsible: true,
         // collapsed: true,
         items: [
+            {
+                text: "css中的百分号%",
+                link: '/study/css/baifenhao'
+            },
             {
                 text: "rem",
                 link: '/study/css/rem'
