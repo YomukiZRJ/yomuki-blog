@@ -1,0 +1,17 @@
+:root {
+    /* 标题 */
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(135deg, #40293d 10%, #f8798e 100%);
+    --vp-c-indigo: #753d45;
+    --vp-c-text-light-2: #d55a71;
+    --vp-c-text-dark-1: #d3909e;
+    --vp-c-text-dark-2: #dfcbdd;
+    --vp-c-brand: #ffbec5;
+    --vp-c-brand-light: #fddbdf;
+    --vp-c-brand-lighter: #fddbdf;
+    --vp-c-brand-dark: #dfcbdd;
+}
+
+.dark {
+    --vp-home-hero-name-background: linear-gradient(135deg, #dfcbdd 10%, #f8798e 100%);
+}

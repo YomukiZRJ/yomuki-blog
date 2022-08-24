@@ -4,6 +4,9 @@ hero:
   name: Yomuki
   text: 一个记录，偶尔翻翻
   tagline: 时间就是金钱，我的朋友
+  image:
+    src: /avatar.png
+    alt: Yomuki
   actions:
   - theme: brand
     text: 日常

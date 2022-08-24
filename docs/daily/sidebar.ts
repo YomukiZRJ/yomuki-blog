@@ -5,6 +5,10 @@ export default [{
     // collapsed: true,
     items: [
         {
+            text: "20220823",
+            link: '/daily/diary/20220823'
+        },
+        {
             text: "20220822",
             link: '/daily/diary/20220822'
         },
@@ -86,6 +90,10 @@ export default [{
         {
             text: "拆分前看一眼",
             link: '/daily/record/vue3/split'
+        },
+        {
+            text: "node",
+            link: '/daily/record/node'
         },
         {
             text: "vue3自定义指令",
