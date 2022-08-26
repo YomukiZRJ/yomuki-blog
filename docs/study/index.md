@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-02 15:27:44
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-24 14:57:35
+ * @LastEditTime: 2022-08-26 15:14:30
 -->
 # Hi,这里是一些学习笔记
 - 🙉 今天不学习，明天变垃圾
@@ -25,20 +25,6 @@
 - [ts高级类型](https://mp.weixin.qq.com/s/usDh1-Wzxrf4BftfWhwduA)
 ## webgl
 - [【零基础】充分理解WebGL（一）](https://juejin.cn/post/7098256201661546532)
-## 前端构建工具
-### common
-- [前端构建工具](https://juejin.cn/post/7121279495494959111)
-- [如何带领团队建立前端规范化](https://juejin.cn/post/7085257325165936648)
-- [基于pnpm搭建monorepo项目](https://juejin.cn/post/7084582387060834340)
-- [为什么是pnpm而不是npm,yarn](https://juejin.cn/post/6932046455733485575)
-- [发布一个cli工具](https://juejin.cn/post/6901997583527641101)
-- [也是cli](https://juejin.cn/post/7010673349571379231)
-- [搭建私有npm库](https://juejin.cn/post/7134621230031700005)
-### vite
-- [Vite 是怎样利用 Esbuild 来提升性能的 ？](https://juejin.cn/post/7129802255120728100)
-### webpack
-- [webpack5打包资源优化](https://juejin.cn/post/7112627912632696845)
-- [基于webpack4的构建效率优化](https://juejin.cn/post/7127098334900125710)
 ## react
 - [10个实用的 React Hooks 库](https://juejin.cn/post/7112256252868034591)
 ## 调试

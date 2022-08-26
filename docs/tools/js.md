@@ -12,6 +12,7 @@
 - [Greensock](https://github.com/greensock/GreenSock-JS/) 用于创建高性能，零依赖性，跨浏览器动画
 - [Popmotion](https://github.com/Popmotion/popmotion) 只有12kb
 - [lottie](https://airbnb.io/lottie/#/README) 是一个适用于 Android、iOS、Web 和 Windows 的库，它解析Adob​​e After Effects动画，使用Bodymovin以 json 格式导出，并在移动设备和 Web 上本地呈现它们！
+- [SVGA](https://svga.io/index.html) SVGA 是一种同时兼容 iOS / Android / Flutter / Web 多个平台的动画格式。
 ## 富文本编辑器
 
 - [wangEditor](https://www.wangeditor.com/)  不支持ie&移动端

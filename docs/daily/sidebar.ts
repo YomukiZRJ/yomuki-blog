@@ -5,6 +5,10 @@ export default [{
     // collapsed: true,
     items: [
         {
+            text: "20220826",
+            link: '/daily/diary/20220826'
+        },
+        {
             text: "20220824",
             link: '/daily/diary/20220824'
         },
