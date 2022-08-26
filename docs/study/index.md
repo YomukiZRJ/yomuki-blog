@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-02 15:27:44
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-23 09:36:04
+ * @LastEditTime: 2022-08-24 14:57:35
 -->
 # Hi,这里是一些学习笔记
 - 🙉 今天不学习，明天变垃圾
@@ -52,6 +52,8 @@
 - [vue-big-screen-plugin](https://gitee.com/MTrun/vue-big-screen-plugin) vue3 + ts + datav + echarts + tsx
 - [datav](https://github.com/DataV-Team/DataV) vue2 组件库 但好像没有在维护了？但可以看看源码
 - [飞鱼](https://github.com/CloudWise-OpenSource/FlyFish) 低代码数据可视化开发。react 
+## 解决方案
+- [前端实现word、excel、pdf、ppt、mp4、图片、文本等文件的预览](https://juejin.cn/post/7071598747519549454)
 ## 学习记录😌 
 - 源码共读
   - [【若川视野 x 源码共读】第37期 | create-vite 源码记录](https://juejin.cn/post/7131998239502368776)
