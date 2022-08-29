@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-26 15:02:26
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-26 15:14:09
+ * @LastEditTime: 2022-08-29 17:40:05
  */
 export default [
     {
@@ -25,6 +25,27 @@ export default [
             {
                 text: "npm",
                 link: '/framework/package/npm'
+            },
+        ]
+    },
+    {
+        text: 'node',
+        items: [
+            {
+                text: "process",
+                link: '/framework/node/process'
+            },
+            {
+                text: "path",
+                link: '/framework/node/path'
+            },
+            {
+                text: "fs",
+                link: '/framework/node/fs'
+            },
+            {
+                text: "fs应用",
+                link: '/framework/node/fs-use'
             },
         ]
     },
