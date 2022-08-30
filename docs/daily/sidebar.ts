@@ -1,5 +1,5 @@
 import diaryJson from './diary/index.json';
-console.log(diaryJson)
+// console.log(diaryJson)
 export default [{
     text: '日记',
     collapsible: true,

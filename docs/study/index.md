@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-02 15:27:44
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-30 09:08:40
+ * @LastEditTime: 2022-08-30 11:39:51
 -->
 # Hi,这里是一些学习笔记
 - 🙉 今天不学习，明天变垃圾
@@ -41,6 +41,7 @@
 - [飞鱼](https://github.com/CloudWise-OpenSource/FlyFish) 低代码数据可视化开发。react 
 ## 解决方案
 - [前端实现word、excel、pdf、ppt、mp4、图片、文本等文件的预览](https://juejin.cn/post/7071598747519549454)
+- [前端动态图片生成](https://mp.weixin.qq.com/s/Vzq_aYKVPxjXCVsLmoq88g)
 ## 学习记录😌 
 - 源码共读
   - [【若川视野 x 源码共读】第37期 | create-vite 源码记录](https://juejin.cn/post/7131998239502368776)

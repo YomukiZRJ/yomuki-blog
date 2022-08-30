@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-26 15:02:26
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-29 17:40:05
+ * @LastEditTime: 2022-08-30 16:02:01
  */
 export default [
     {
@@ -49,16 +49,17 @@ export default [
             },
         ]
     },
-    // {
-    //     text: 'node',
-    //     items: [
-
-    //     ]
-    // },
-    // {
-    //     text: '素材库',
-    //     items: [
-
-    //     ]
-    // },
+    {
+        text: '规范化',
+        items: [
+            {
+                text: "eslint",
+                link: '/framework/standardization/eslint'
+            },
+            {
+                text: "stylelint",
+                link: '/framework/standardization/stylelint'
+            },
+        ]
+    },
 ]
