@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-02 15:27:44
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-26 15:14:30
+ * @LastEditTime: 2022-08-30 09:08:40
 -->
 # Hi,这里是一些学习笔记
 - 🙉 今天不学习，明天变垃圾
@@ -15,6 +15,7 @@
 - [回流与重绘](https://juejin.cn/post/6844903569087266823)
 - [又是回流重绘](https://juejin.cn/post/7013131773756309517)
 - [一篇文章搞懂前端兼容问题](https://juejin.cn/post/7130435421904830494)
+- [图解浏览器渲染原理和流程](https://mp.weixin.qq.com/s/9GMk0kFTHyTW_UrL0svNpQ)
 
 ## css
 

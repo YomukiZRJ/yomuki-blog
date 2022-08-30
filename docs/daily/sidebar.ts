@@ -1,90 +1,10 @@
-
+import diaryJson from './diary/index.json';
+console.log(diaryJson)
 export default [{
     text: '日记',
     collapsible: true,
     // collapsed: true,
-    items: [
-        {
-            text: "20220829",
-            link: '/daily/diary/20220829'
-        },
-        {
-            text: "20220826",
-            link: '/daily/diary/20220826'
-        },
-        {
-            text: "20220824",
-            link: '/daily/diary/20220824'
-        },
-        {
-            text: "20220823",
-            link: '/daily/diary/20220823'
-        },
-        {
-            text: "20220822",
-            link: '/daily/diary/20220822'
-        },
-        {
-            text: "20220819",
-            link: '/daily/diary/20220819'
-        },
-        {
-            text: "20220818",
-            link: '/daily/diary/20220818'
-        },
-        {
-            text: "20220817",
-            link: '/daily/diary/20220817'
-        },
-        {
-            text: "20220816",
-            link: '/daily/diary/20220816'
-        },
-        {
-            text: "20220815",
-            link: '/daily/diary/20220815'
-        },
-        {
-            text: "20220814",
-            link: '/daily/diary/20220814'
-        },
-        {
-            text: "20220812",
-            link: '/daily/diary/20220812'
-        },
-        {
-            text: "20220811",
-            link: '/daily/diary/20220811'
-        },
-        {
-            text: "20220810",
-            link: '/daily/diary/20220810'
-        },
-        {
-            text: "20220809",
-            link: '/daily/diary/20220809'
-        },
-        {
-            text: "20220808",
-            link: '/daily/diary/20220808'
-        },
-        {
-            text: "20220806",
-            link: '/daily/diary/20220806'
-        },
-        {
-            text: "20220805",
-            link: '/daily/diary/20220805'
-        },
-        {
-            text: "20220804",
-            link: '/daily/diary/20220804'
-        },
-        {
-            text: "20220803",
-            link: '/daily/diary/20220803'
-        },
-    ]
+    items: diaryJson
 },
 {
     text: '工作会用放前面点方便c+v',
