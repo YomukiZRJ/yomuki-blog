@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-26 15:02:26
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-30 16:02:01
+ * @LastEditTime: 2022-08-31 14:45:22
  */
 export default [
     {
@@ -59,6 +59,14 @@ export default [
             {
                 text: "stylelint",
                 link: '/framework/standardization/stylelint'
+            },
+            {
+                text: "git",
+                link: '/framework/standardization/git'
+            },
+            {
+                text: "husky",
+                link: '/framework/standardization/husky'
             },
         ]
     },

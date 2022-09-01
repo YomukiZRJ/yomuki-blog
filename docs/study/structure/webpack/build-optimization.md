@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-17 10:25:37
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-17 16:09:52
+ * @LastEditTime: 2022-09-01 12:43:17
 -->
 # webpack 构建优化
 ## 参考文章
@@ -58,8 +58,14 @@ new webpack.NormalModuleReplacementPlugin(
 ### dev.routes如何生成呢？
 - [Inquirer](https://github.com/SBoudrias/Inquirer.js/) 交互命令行
 - [esj](https://ejs.bootcss.com/) 嵌入式 JavaScript 模板引擎
+## 开发构建优化
+某些 utility, plugin 和 loader 都只用于生产环境。例如，在开发环境下使用 TerserPlugin 来 minify(压缩) 和 mangle(混淆破坏) 代码是没有意义的。通常在开发环境下，应该排除以下这些工具：
+- TerserPlugin
+- [fullhash]/[chunkhash]/[contenthash]
+- AggressiveSplittingPlugin
+- AggressiveMergingPlugin
+- ModuleConcatenationPlugin
 ## 生产构建优化
 - 可在build阶段去掉代码静态检查 eslint
 - 使用[esbuild-loader](https://github.com/privatenumber/esbuild-loader) 去替代非常耗时的 babel-loader、ts-loader 等 loader
   - 它把 esbuild 的能力包装成 Webpack 的 loader 来实现 Javascript、TypeScript、CSS 等资源的编译。以及提供更快的资源压缩方案。
-  - 

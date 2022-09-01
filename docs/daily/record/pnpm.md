@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-14 09:49:25
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-14 10:31:29
+ * @LastEditTime: 2022-08-31 10:07:16
 -->
 # pnpm记录
 [pnpm](https://www.pnpm.cn/)
@@ -43,7 +43,10 @@ yomuki-A/packages
 根目录 packages
 ```
 "dev": "pnpm run dev --filter '*'"
+"cli:add": "pnpm run add --filter yomuki-template-cli"
+<!-- --filter <package_selector> <command> -->
 ```
+
 ## 问题记录
 - Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
   - 在packages中配置type  "type": "module"

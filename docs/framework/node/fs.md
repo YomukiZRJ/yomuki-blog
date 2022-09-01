@@ -3,7 +3,7 @@
  * @Author: 曾茹菁
  * @Date: 2022-08-29 14:12:02
  * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-29 16:44:29
+ * @LastEditTime: 2022-09-01 14:43:08
 -->
 # node 的 fs 模块
 - [fs](https://nodejs.org/dist/latest-v18.x/docs/api/fs.html)
@@ -62,6 +62,9 @@ fs.writeFile(resolve(cwd(), "re.js"), "const a = 'asd';", (err) => {
   }
 });
 ```
+## fs.copyFileSync(src, dest[, mode])
+同步复制文件。复制src到dest
+
 ## fs.mkdirSync(path[, options])
 同步创建目录
 ```js
