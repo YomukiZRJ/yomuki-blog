@@ -25,5 +25,5 @@ features:
 
   - icon: 💡
     title: 近期
-    details: 架构学习中……
+    details: yomuki is free ！
 ---
