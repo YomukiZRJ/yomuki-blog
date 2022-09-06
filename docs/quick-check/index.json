@@ -1,0 +1,42 @@
+[
+  {
+    "text": "pnpm",
+    "link": "/quick-check/pnpm"
+  },
+  {
+    "text": "webpack",
+    "link": "/quick-check/webpack"
+  },
+  {
+    "text": "vue3 - 拆分前看一眼",
+    "link": "/quick-check/vue3-split"
+  },
+  {
+    "text": "node",
+    "link": "/quick-check/node"
+  },
+  {
+    "text": "vue3 - 自定义指令",
+    "link": "/quick-check/vue3-directive"
+  },
+  {
+    "text": "axios-ts",
+    "link": "/quick-check/axios-ts"
+  },
+  {
+    "text": "EventBus",
+    "link": "/quick-check/eventBus"
+  },
+  {
+    "text": "rem",
+    "link": "/quick-check/rem"
+  },
+  {
+    "text": "样式兼容",
+    "link": "/quick-check/compatible-style"
+  },
+  {
+    "text": "环境配置问题",
+    "link": "/quick-check/configure-error"
+  }
+]

@@ -7,10 +7,10 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
-    "diary": "node scripts/diary.js",
     "prepare": "husky install",
     "lint:lint-staged": "lint-staged",
-    "commit": "git add . && git-cz"
+    "commit": "git add . && git-cz",
+    "cli:add": "pnpm run cli:add --filter yomuki-blog-cli"
   },
   "author": "yomuki",
   "license": "ISC",

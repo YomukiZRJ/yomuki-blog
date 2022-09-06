@@ -1,50 +1,54 @@
 lockfileVersion: 5.3
 
-specifiers:
-  '@commitlint/cli': ^17.1.2
-  '@commitlint/config-conventional': ^17.1.0
-  '@typescript-eslint/eslint-plugin': ^5.32.0
-  '@typescript-eslint/parser': ^5.32.0
-  '@vitejs/plugin-vue-jsx': ^2.0.0
-  '@vue/eslint-config-typescript': ^11.0.0
-  commitizen: ^4.2.5
-  cz-git: ^1.3.11
-  dayjs: ^1.11.4
-  eslint: ^8.21.0
-  eslint-config-prettier: ^8.5.0
-  eslint-plugin-prettier: ^4.2.1
-  eslint-plugin-vue: ^9.3.0
-  husky: ^8.0.0
-  lint-staged: ^13.0.3
-  prettier: ^2.7.1
-  typescript: ^4.7.4
-  vite: ^3.0.4
-  vitepress: ^1.0.0-alpha.4
-  vue: ^3.2.37
+importers:
 
-dependencies:
-  dayjs: 1.11.4
+  .:
+    specifiers:
+      '@commitlint/cli': ^17.1.2
+      '@commitlint/config-conventional': ^17.1.0
+      '@typescript-eslint/eslint-plugin': ^5.32.0
+      '@typescript-eslint/parser': ^5.32.0
+      '@vitejs/plugin-vue-jsx': ^2.0.0
+      '@vue/eslint-config-typescript': ^11.0.0
+      commitizen: ^4.2.5
+      cz-git: ^1.3.11
+      dayjs: ^1.11.4
+      eslint: ^8.21.0
+      eslint-config-prettier: ^8.5.0
+      eslint-plugin-prettier: ^4.2.1
+      eslint-plugin-vue: ^9.3.0
+      husky: ^8.0.0
+      lint-staged: ^13.0.3
+      prettier: ^2.7.1
+      typescript: ^4.7.4
+      vite: ^3.0.4
+      vitepress: ^1.0.0-alpha.4
+      vue: ^3.2.37
+    dependencies:
+      dayjs: 1.11.4
+    devDependencies:
+      '@commitlint/cli': 17.1.2
+      '@commitlint/config-conventional': 17.1.0
+      '@typescript-eslint/eslint-plugin': 5.32.0_43a51d9e2446a740dea4259743d3ab3e
+      '@typescript-eslint/parser': 5.32.0_eslint@8.21.0+typescript@4.7.4
+      '@vitejs/plugin-vue-jsx': 2.0.0_vite@3.0.4+vue@3.2.37
+      '@vue/eslint-config-typescript': 11.0.0_68bed5368fd9c3817be613fb811b8b0e
+      commitizen: 4.2.5
+      cz-git: 1.3.11
+      eslint: 8.21.0
+      eslint-config-prettier: 8.5.0_eslint@8.21.0
+      eslint-plugin-prettier: 4.2.1_3fb4ba81a229f81fc7d96e86670e27e9
+      eslint-plugin-vue: 9.3.0_eslint@8.21.0
+      husky: 8.0.1
+      lint-staged: 13.0.3
+      prettier: 2.7.1
+      typescript: 4.7.4
+      vite: 3.0.4
+      vitepress: 1.0.0-alpha.4
+      vue: 3.2.37
 
-devDependencies:
-  '@commitlint/cli': 17.1.2
-  '@commitlint/config-conventional': 17.1.0
-  '@typescript-eslint/eslint-plugin': 5.32.0_43a51d9e2446a740dea4259743d3ab3e
-  '@typescript-eslint/parser': 5.32.0_eslint@8.21.0+typescript@4.7.4
-  '@vitejs/plugin-vue-jsx': 2.0.0_vite@3.0.4+vue@3.2.37
-  '@vue/eslint-config-typescript': 11.0.0_68bed5368fd9c3817be613fb811b8b0e
-  commitizen: 4.2.5
-  cz-git: 1.3.11
-  eslint: 8.21.0
-  eslint-config-prettier: 8.5.0_eslint@8.21.0
-  eslint-plugin-prettier: 4.2.1_3fb4ba81a229f81fc7d96e86670e27e9
-  eslint-plugin-vue: 9.3.0_eslint@8.21.0
-  husky: 8.0.1
-  lint-staged: 13.0.3
-  prettier: 2.7.1
-  typescript: 4.7.4
-  vite: 3.0.4
-  vitepress: 1.0.0-alpha.4
-  vue: 3.2.37
+  cli:
+    specifiers: {}
 
 packages:
 

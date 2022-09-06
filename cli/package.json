@@ -1,0 +1,15 @@
+{
+  "name": "yomuki-blog-cli",
+  "version": "1.0.1",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "ymblog": "index.js"
+  },
+  "scripts": {
+    "cli:add": "node index.js"
+  },
+  "author": "yomuki",
+  "license": "MIT"
+}
