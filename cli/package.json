@@ -11,5 +11,8 @@
     "cli:add": "node index.js"
   },
   "author": "yomuki",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
 }
