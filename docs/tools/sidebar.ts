@@ -10,8 +10,12 @@ export default [
     text: "库",
     items: [
       {
-        text: "js插件库",
-        link: "/tools/js",
+        text: "js插件库 - coding",
+        link: "/tools/js-coding",
+      },
+      {
+        text: "js插件库 - 架构",
+        link: "/tools/js-framework",
       },
       {
         text: "css库",
@@ -22,8 +26,8 @@ export default [
         link: "/tools/vue",
       },
       {
-        text: "架构库",
-        link: "/tools/framework",
+        text: "部署 & online & 质量",
+        link: "/tools/deploy-online",
       },
     ],
   },
@@ -31,12 +35,16 @@ export default [
     text: "开发帮助",
     items: [
       {
-        text: "css-生成工具",
+        text: "生成&处理&调试工具",
         link: "/tools/generate",
       },
       {
         text: "网页速成",
         link: "/tools/quick",
+      },
+      {
+        trxt: "风格指南",
+        link: "/tools/style-guide",
       },
     ],
   },

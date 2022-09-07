@@ -4,7 +4,15 @@
 
 - [Pinia](https://github.com/vuejs/pinia) 轻量级状态管理 比 vuex 小（个人觉得比 vuex 好用 🙈）
 - vuex
+  - [vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate) 持久存储 2021update
+  - [vuex-persist](https://github.com/championswimmer/vuex-persist) 持久存储 2020update
 - vuex-persist 支持 Typescript 的 Vuex 插件，使你能够将应用程序的状态保存到持久存储中，例如 Cookies 或 localStorage。
+
+## 功能实现
+
+- [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2) vue2 剪切板
+- [vue-quill-editor](https://www.npmjs.com/package/vue-quill-editor) 基于 quill & vue2
+- [vue-lazyload](https://www.npmjs.com/package/vue-lazyload) vue1/vue2 图片懒加载 自定义指令
 
 ## 可视化
 

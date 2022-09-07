@@ -3,27 +3,60 @@
 ## 工具库
 
 - [Lodash](https://www.lodashjs.com/) 有 es 按需导入
+- [underscorejs](https://underscorejs.net/#) 函数式编程的实用功能
+- [outils](https://www.npmjs.com/package/outils) 业务代码工具库(用来学习挺不错的，然后自己整一个)
+- [ramda](https://www.npmjs.com/package/ramda) 实用函数库，有[中文文档](https://ramda.cn/)，从不改变用户已有数据
+- [nanoid](https://gitee.com/mirrors/nanoid) 唯一 id 生成
+- [uuid](https://www.npmjs.com/package/uuid) uuid 生成。commonJs/ESM
+- [crypto-js](https://www.npmjs.com/package/crypto-js) 加密
+- [md5](https://www.npmjs.com/package/md5) md5
+- [classnames](https://www.npmjs.com/package/classnames) 类名连接
+- [query-string](https://www.npmjs.com/package/query-string) 解析和 stringify URL 查询字符串
+
+## API 拓展
+
+- [js-cookie](https://www.npmjs.com/package/js-cookie) 用于处理 cookie 的简单、轻量级 JavaScript API。ESM/commonJs
+- dayjs
+- [screenfull](https://www.npmjs.com/package/screenfull) 用于跨浏览器使用 JavaScript [Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)的简单包装器，可让您将页面或任何元素变为全屏。
+
+## 功能实现
+
+- [qrcodejs2](https://www.npmjs.com/package/qrcodejs2) 二维码生成。7 年前发布。
+- [clipboard](https://www.npmjs.com/package/clipboard) 剪切板
+  - [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2) vue2 剪切板
+- [nprogress](https://www.npmjs.com/package/nprogress) 浏览器进度条。7 年前发布
+- [downloadjs](https://www.npmjs.com/package/downloadjs) 从浏览器下载文件。6 年前发布
 
 ## 滚动
 
 - [BetterScroll](https://better-scroll.github.io/docs/zh-CN/) （上拉加载、下拉刷新、Picker、鼠标滚轮、放大缩小、移动缩放、轮播图、滚动视觉差，放大镜）(监听 dom 的插件有坑，用 vueuse 代替！)
 
-## 数据
+## 元素动画
 
-- [nanoid](https://gitee.com/mirrors/nanoid) 唯一 id 生成
-
-## 动画
-
+- [animejs](https://animejs.com/)
 - [Greensock](https://github.com/greensock/GreenSock-JS/) 用于创建高性能，零依赖性，跨浏览器动画
 - [Popmotion](https://github.com/Popmotion/popmotion) 只有 12kb
-- [lottie](https://airbnb.io/lottie/#/README) 是一个适用于 Android、iOS、Web 和 Windows 的库，它解析 Adob​​e After Effects 动画，使用 Bodymovin 以 json 格式导出，并在移动设备和 Web 上本地呈现它们！
+
+## 图片动画 - 生成
+
 - [SVGA](https://svga.io/index.html) SVGA 是一种同时兼容 iOS / Android / Flutter / Web 多个平台的动画格式。
+- [lottie](https://airbnb.io/lottie/#/README) 是一个适用于 Android、iOS、Web 和 Windows 的库，它解析 Adob​​e After Effects 动画，使用 Bodymovin 以 json 格式导出，并在移动设备和 Web 上本地呈现它们！
+- [gka](https://gka.js.org/#/) **node** 帧动画生成
+
+## 3d/webgl/可视化库
+
+- three.js 基于 WebGL
+- [d3js](https://d3js.org/) 数据可视化库
+- [chartjs](https://www.chartjs.org/)
+- [echarts](https://echarts.apache.org/zh/index.html)
+- [highcharts](https://www.highcharts.com.cn/)
 
 ## 富文本编辑器
 
 - [wangEditor](https://www.wangeditor.com/) 不支持 ie&移动端
 - [tiptap](https://github.com/ueberdosis/tiptap) 有协作模式，有 vue3 组件
 - [Quill.js](https://github.com/quilljs/quill/) 跨平台和跨浏览器支持的富文本编辑器
+  - [vue-quill-editor](https://www.npmjs.com/package/vue-quill-editor) 基于 vue2
 - [TinyMCE](https://github.com/tinymce/tinymce) 插件多
 - [**CKEditor 5**](https://github.com/ckeditor/ckeditor5)
 
@@ -35,8 +68,9 @@
 - [jsPDF](https://github.com/parallax/jsPDF) 用 js 生成 pdf
 - [pdfmake](https://github.com/bpampuch/pdfmake) 用 js 生成 pdf
 - [pdf-lib](https://github.com/Hopding/pdf-lib) 创建和修改 pdf
-- [pdfkit](https://github.com/foliojs/pdfkit) 生成 pdf
+- [pdfkit](https://www.npmjs.com/package/pdfkit) 生成 pdf。node/browser
 - [react-pdf](https://github.com/diegomura/react-pdf) pdf 生成 react 渲染器
+- [html-pdf](https://www.npmjs.com/package/html-pdf) html 变 pdf **node**
 
 ### 图片
 
@@ -59,29 +93,20 @@
 ### 表格
 
 - [Handsontable](https://github.com/handsontable/handsontable) 具有电子表格外观的 JavaScript 数据网格组件。适用于 React、Angular 和 Vue。它结合了数据网格功能和类似电子表格的 UX。它提供数据绑定、数据验证、过滤、排序和 CRUD 操作。
-
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/12445375/1658196475421-533b4aa0-e593-4d24-be13-0265028488ff.png#clientId=ue8b8b857-5d27-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=386&id=u637e49f1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=771&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&size=226842&status=done&style=none&taskId=ube86ea99-0a5e-47bd-a101-9417ee8fb15&title=&width=540)
-
 - [ag-grid ](https://github.com/ag-grid/ag-grid)功能齐全且高度可定制的 JavaScript 数据网格。它提供了出色的性能，没有第三方依赖，并且可以与所有主要 JavaScript 框架顺利集成。
-  ![image.png](https://cdn.nlark.com/yuque/0/2022/png/12445375/1658196484519-baf25bb5-d96a-4cc1-84b3-34408268063b.png#clientId=ue8b8b857-5d27-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=243&id=uf3aaf84c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=485&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&size=135694&status=done&style=none&taskId=u767deb93-8add-4602-bd54-2cb3b47b3d6&title=&width=540)
 - [x-spreadsheet](https://github.com/myliang/x-spreadsheet) 基于 Web 的 JavaScript（canvas）电子表格。
-
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/12445375/1658196517836-ae238894-f1a0-4002-b1ec-67948195739b.png#clientId=ue8b8b857-5d27-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=309&id=u410c02dc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=618&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&size=49127&status=done&style=none&taskId=u508831ee-d8dd-479a-98fe-c5d381c97fc&title=&width=540)
 
 - [cheetah-grid](https://github.com/future-architect/cheetah-grid) 最快的 Web 开源数据表。
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/12445375/1658196555363-99c1ca3e-9c57-4577-816e-c1320eb21b40.png#clientId=ue8b8b857-5d27-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=266&id=u8516eb2d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=532&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&size=109980&status=done&style=none&taskId=u5c31073a-3831-42c9-96c7-10c7df80b74&title=&width=540)
-
 - [ExcelJS](https://github.com/exceljs/exceljs) Excel 电子表格文件逆向工程项目。可以读取，操作并写入电子表格数据和样式到 XLSX 和 JSON 文件。
-- [SheetJS](https://github.com/SheetJS/sheetjs) 简化的电子表格，用意用来阅读、编辑和导出电子表格，其适用于 Web 浏览器和服务器，在 Office 365 中受 Microsoft 信任。
+- [SheetJS](https://github.com/SheetJS/sheetjs) 简化的电子表格，用意用来阅读、编辑和导出电子表格，其适用于 Web 浏览器和服务器，在 Office 365 中受 Microsoft 信任。**node/browser**
+  - ⭐️[node-xlsx](https://www.npmjs.com/package/node-xlsx) 基于 SheetJS 的**node** excel 插件。只能生成 xlsx 格式
 
 ### 文件上传
 
 - [Uppy](https://github.com/transloadit/uppy) （25.5⭐️）模块化 JavaScript 文件上传器，可与任何应用程序无缝集成。它速度快，具有易于理解的 API，让您不必担心比构建文件上传器更重要的问题。
 - [filepond](https://github.com/pqina/filepond) 用于上传文件的 JavaScript 库，优化图像以加快上传速度，并提供出色、可访问、如丝般流畅的用户体验。
 - [Dropzone](https://github.com/dropzone/dropzone) 可以将任何 HTML 元素转换为 dropzone。这意味着用户可以将文件拖放到上面，Dropzone 将显示文件预览和上传进度，并通过 XHR 为你处理上传。
-
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/12445375/1658197029396-f4df6893-e24e-44ee-90b4-29d45158a9f5.png#clientId=ue8b8b857-5d27-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=172&id=u08ddc568&margin=%5Bobject%20Object%5D&name=image.png&originHeight=343&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&size=296683&status=done&style=none&taskId=u4f35fcb4-da41-48f4-9223-b17f3bcefdc&title=&width=540)
 
 - [vue-upload-component ](https://github.com/lian-yue/vue-upload-component)用于 Vue.js 的上传组件，支持多文件上传，上传目录，拖拽上传，拖拽目录，以及支持同时上传多个文件等。
 - [Uppload](https://github.com/elninotech/uppload) JavaScript 图片上传器。它具有 30 多个插件的高度可定制性，完全免费和开源，并且可以与任何文件上传后端一起使用。
