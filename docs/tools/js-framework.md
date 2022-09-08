@@ -10,9 +10,10 @@
 
 - [Tooling.Report](https://bundlers.tooling.report/) 构建工具对比平台
 
-## 包管理器
+## 包管理
 
 - [pnpm](https://www.pnpm.cn/)
+- [semver](https://www.npmjs.com/package/semver) npm 语义版本。用于检查 npm 版本
 
 ## cli 脚手架
 

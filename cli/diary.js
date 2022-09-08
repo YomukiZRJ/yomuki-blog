@@ -9,9 +9,9 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { cwd } from "node:process";
 export default () => {
-  const DIARY_LINK = "/daily/diary";
-  const DIARY_PATH = "daily/diary"; // 日记路径
-  const JSON_PATH = "daily/diary/index.json"; // 边栏文件路径
+  const DIARY_LINK = "/diary";
+  const DIARY_PATH = "diary"; // 日记路径
+  const JSON_PATH = "diary/index.json"; // 边栏文件路径
   let docsPath = cwd();
   docsPath = docsPath.slice(0, docsPath.length - 3) + "docs";
   console.log(docsPath);
