@@ -32,6 +32,10 @@ export default [
     text: "node",
     items: [
       {
+        text: "perf_hooks",
+        link: "/framework/node/perf_hooks",
+      },
+      {
         text: "process",
         link: "/framework/node/process",
       },
