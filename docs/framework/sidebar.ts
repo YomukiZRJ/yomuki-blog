@@ -17,6 +17,10 @@ export default [
         text: "感谢大佬们的好文章！",
         link: "/framework/article",
       },
+      {
+        text: "《前端架构师 - 技术建设与架构设计思想》笔记",
+        link: "/framework/note-houce",
+      },
     ],
   },
   {
