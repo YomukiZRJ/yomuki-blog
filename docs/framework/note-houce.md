@@ -204,3 +204,56 @@ babel.transform("const a = 1;", (err, res) => {
 - @babel/node 类似于 Node.js cli 。提供了在命令行执行高级语法的环境。（运行时编译转换）
 - @babel/register 为 require 增加 hook，使用后，所有被 Node.js 引用的文件都会被 Babel 先转码。（运行时编译转换）
 - [@babel/loader](https://www.npmjs.com/package/babel-loader) webpack loader
+
+## 公共库搭建
+
+p103 文章展示了如何用 webpack 搭建公共库。（用 father 好像更方便？）  
+package.json 中的入口文件字段说明：
+
+- main 定义了 npm 包的入口文件，浏览器环境和 Node.js 环境均可使用
+- module 定义了 npm 包的 ESM 规范入口文件，浏览器环境和 Node.js 环境均可使用
+- browser 定义了 npm 包在浏览器环境下的入口文件
+  webpack 在浏览器环境下，优先选择 browser > module > main；在 Node.js 中，module >main。
+
+## 代码拆分与按需加载
+
+合理的代码拆分与按需加载可以使项目体积更小、页面加载更快。  
+比如，页面上有一个包含复杂业务逻辑的悬浮层，只有 10%的用户会点击。在用户点击时再进行对这一部分脚本的请求。
+
+### 按需打包的实现
+
+#### **使用 ESM 支持的 TreeShaking 方案。**
+
+webpack4 新增了一个 sideEffects 新特性，它允许我们通过配置的方式，去标识我们的代码是否有副作用，从而为 Tree-shaking 提供更大的压缩空间。  
+这里的副作用指的是模块执行时除了导出成员之外所做的事情。  
+sideEffects 一般用于 npm 包标记是否有副作用。  
+开启了**sideEffects**配置后，webpack 在打包时就会先检查当前代码所属的 package.json 中有没有 sideEffects 的标识，以此来判断这个模块是不是又副作用。如果这个模块没有副作用，这些没被用到的模块就不会被打包。（这个特性在 production 模式下会自动开启）
+
+```js
+module.exports = {
+  mode: "none",
+  entry: "./src/index.js",
+  output: {
+    filename: "bundle.js",
+  },
+  optimization: {
+    sideEffects: true,
+  },
+};
+```
+
+#### **编写 Babel 插件实现自动按需打包**
+
+如果第三方库不支持 tree shaking 方案，可以通过 babel 插件改变业务代码中对模块的引用路径来实现按需打包。  
+比如 babel-plugin-import。它会将以下引入
+
+```js
+import { Button as Btn, Input } from "antd";
+```
+
+改为
+
+```js
+import _Button from "antd/lib/button";
+import _Input from "antd/lib/input";
+```

@@ -82,7 +82,7 @@ s 固定参数，对应 options.subdomains
 
 用于将几个图层分组并作为一个整体处理。如果你把它添加到地图上，任何从该组中添加或删除的图层也会在地图上添加/删除。
 
-> 一般用于合并底图图层和标注图层
+> 一般用于合并底图图层和标注图层，合并 markets。
 
 ```js
 L.layerGroup([
@@ -112,3 +112,5 @@ L.layerGroup([
 ## [Icon](https://leafletjs.cn/reference.html#icon) 图标
 
 创建图标对象。
+
+## [marker](https://leafletjs.cn/reference.html#marker) 标记
