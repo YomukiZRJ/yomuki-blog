@@ -44,10 +44,18 @@ export default [
     items: cssData,
   },
   {
-    text: "插件相关",
+    text: "其他",
     collapsible: true,
     // collapsed: true,
     items: [
+      {
+        text: "GeoJSON学习记录",
+        link: "/study/other/GeoJSON",
+      },
+      {
+        text: "leafletjs学习记录",
+        link: "/study/other/leafletjs",
+      },
       {
         text: "lodash - 数组",
         link: "/study/other/lodash-01",

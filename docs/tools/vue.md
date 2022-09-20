@@ -28,6 +28,7 @@
 - [swiper](https://github.com/nolimits4web/swiper) 有 vue 组件，耳熟能详
 - [vue-easytable ](https://github.com/Happy-Coding-Clans/vue-easytable)v2 表格组件
 - [Vue Kinesis](https://github.com/Aminerman/vue-kinesis) v2&v3 轻松创建复杂的交互式动画
+- [v-region](https://www.npmjs.com/package/v-region) 基于 vue2.6+的中国行政四级选择。（贼大，6M+）
 
 ## 表单
 

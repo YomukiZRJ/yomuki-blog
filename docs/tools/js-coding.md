@@ -10,6 +10,7 @@
 - [uuid](https://www.npmjs.com/package/uuid) uuid 生成。commonJs/ESM
 - [crypto-js](https://www.npmjs.com/package/crypto-js) 加密
 - [md5](https://www.npmjs.com/package/md5) md5
+- [jsencrypt](https://www.npmjs.com/package/jsencrypt) RSA 加密
 - [classnames](https://www.npmjs.com/package/classnames) 类名连接
 - [query-string](https://www.npmjs.com/package/query-string) 解析和 stringify URL 查询字符串
 
@@ -26,6 +27,8 @@
   - [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2) vue2 剪切板
 - [nprogress](https://www.npmjs.com/package/nprogress) 浏览器进度条。7 年前发布
 - [downloadjs](https://www.npmjs.com/package/downloadjs) 从浏览器下载文件。6 年前发布
+- [dom-to-image](https://www.npmjs.com/package/dom-to-image) 将任意 DOM 节点转换为矢量（SVG）或光栅（PNG 或 JPEG）图像
+- [html2canvas](https://www.npmjs.com/package/html2canvas) html 转 canvas
 
 ## 滚动
 
@@ -50,6 +53,23 @@
 - [chartjs](https://www.chartjs.org/)
 - [echarts](https://echarts.apache.org/zh/index.html)
 - [highcharts](https://www.highcharts.com.cn/)
+
+## WebGIS
+
+- [supermap](http://support.supermap.com.cn:8090/iserver/iClient/forJavaScript/web/introduction/leafletDevelop.html#Ready) 云 GIS 网络客户端开发平台。开源，可拓展，支持 leafletjs，openlayers，mapboxGL...对多种互联网地图信息进行了封装，例如百度地图、天地图等。
+- [leafletjs](https://leafletjs.com/) 开源、体积小、结构清晰、简单易用
+  - [leaflet-heatmap.js](https://www.patrick-wied.at/static/heatmapjs/plugin-leaflet-layer.html) 热力图插件
+- [Openlayers](https://openlayers.org/) 开源，相比于 Leaflet 更加复杂和完备。
+- [Cesium](https://www.cesium.com/) 三维地理可视化的常用库，在大尺度的可视化（地形、建筑、地球）中十分常用。
+- 高德地图 JS API
+- 百度地图 JS API
+- 天地图 JS API
+- [@turf/turf](https://turfjs.org/) 地理空间分析引擎，使用 GeoJSON 数据执行地理空间处理任务。
+
+## 数据可视化
+
+- [heatmapjs](https://www.patrick-wied.at/static/heatmapjs/) 热图可视化库。有 Leaflet 插件
+  - [leaflet-heatmap.js](https://www.patrick-wied.at/static/heatmapjs/plugin-leaflet-layer.html)
 
 ## 富文本编辑器
 
