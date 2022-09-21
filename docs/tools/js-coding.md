@@ -45,19 +45,13 @@
 - [SVGA](https://svga.io/index.html) SVGA 是一种同时兼容 iOS / Android / Flutter / Web 多个平台的动画格式。
 - [lottie](https://airbnb.io/lottie/#/README) 是一个适用于 Android、iOS、Web 和 Windows 的库，它解析 Adob​​e After Effects 动画，使用 Bodymovin 以 json 格式导出，并在移动设备和 Web 上本地呈现它们！
 - [gka](https://gka.js.org/#/) **node** 帧动画生成
+  d
 
-## 3d/webgl/可视化库
-
-- three.js 基于 WebGL
-- [d3js](https://d3js.org/) 数据可视化库
-- [chartjs](https://www.chartjs.org/)
-- [echarts](https://echarts.apache.org/zh/index.html)
-- [highcharts](https://www.highcharts.com.cn/)
-
-## WebGIS
+## WebGIS(地理信息系统)
 
 - [supermap](http://support.supermap.com.cn:8090/iserver/iClient/forJavaScript/web/introduction/leafletDevelop.html#Ready) 云 GIS 网络客户端开发平台。开源，可拓展，支持 leafletjs，openlayers，mapboxGL...对多种互联网地图信息进行了封装，例如百度地图、天地图等。
 - [leafletjs](https://leafletjs.com/) 开源、体积小、结构清晰、简单易用
+  - [leaflet.markercluster](https://www.npmjs.com/package/leaflet.markercluster) 标记聚类
   - [leaflet-heatmap.js](https://www.patrick-wied.at/static/heatmapjs/plugin-leaflet-layer.html) 热力图插件
 - [Openlayers](https://openlayers.org/) 开源，相比于 Leaflet 更加复杂和完备。
 - [Cesium](https://www.cesium.com/) 三维地理可视化的常用库，在大尺度的可视化（地形、建筑、地球）中十分常用。
@@ -66,10 +60,19 @@
 - 天地图 JS API
 - [@turf/turf](https://turfjs.org/) 地理空间分析引擎，使用 GeoJSON 数据执行地理空间处理任务。
 
+## WebGL(3D 网页绘图)
+
+- three.js 基于 WebGL
+
 ## 数据可视化
 
+- [chartjs](https://www.chartjs.org/)
+- [echarts](https://echarts.apache.org/zh/index.html)
+- [highcharts](https://www.highcharts.com.cn/)
 - [heatmapjs](https://www.patrick-wied.at/static/heatmapjs/) 热图可视化库。有 Leaflet 插件
   - [leaflet-heatmap.js](https://www.patrick-wied.at/static/heatmapjs/plugin-leaflet-layer.html)
+- [d3js](https://d3js.org/) WebGL 数据可视化库
+- [mars3d](http://mars3d.cn/) WebGL&WebGIS 基于 Cesium 的三维可视化平台
 
 ## 富文本编辑器
 
