@@ -21,6 +21,10 @@ export default [
         text: "《前端架构师 - 技术建设与架构设计思想》笔记",
         link: "/framework/note-houce",
       },
+      {
+        text: "babel记录",
+        link: "/framework/babel",
+      },
     ],
   },
   {
