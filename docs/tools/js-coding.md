@@ -19,6 +19,7 @@
 - [js-cookie](https://www.npmjs.com/package/js-cookie) 用于处理 cookie 的简单、轻量级 JavaScript API。ESM/commonJs
 - dayjs
 - [screenfull](https://www.npmjs.com/package/screenfull) 用于跨浏览器使用 JavaScript [Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)的简单包装器，可让您将页面或任何元素变为全屏。
+- [proxy-web-storage](https://www.npmjs.com/package/proxy-web-storage) 用 proxy 封装了 localStorage 和 sessionStorage。除了常规的数据存储，可支持事件监听和设置过期时间。
 
 ## 功能实现
 
@@ -50,7 +51,7 @@
 ## WebGIS(地理信息系统)
 
 - [supermap](http://support.supermap.com.cn:8090/iserver/iClient/forJavaScript/web/introduction/leafletDevelop.html#Ready) 云 GIS 网络客户端开发平台。开源，可拓展，支持 leafletjs，openlayers，mapboxGL...对多种互联网地图信息进行了封装，例如百度地图、天地图等。
-- [leafletjs](https://leafletjs.com/) 开源、体积小、结构清晰、简单易用
+- [leafletjs](https://leafletjs.com/) 二维，开源、体积小、结构清晰、简单易用
   - [leaflet.markercluster](https://www.npmjs.com/package/leaflet.markercluster) 标记聚类
   - [leaflet-heatmap.js](https://www.patrick-wied.at/static/heatmapjs/plugin-leaflet-layer.html) 热力图插件
 - [Openlayers](https://openlayers.org/) 开源，相比于 Leaflet 更加复杂和完备。
