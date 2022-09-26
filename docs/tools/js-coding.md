@@ -35,6 +35,10 @@
 
 - [BetterScroll](https://better-scroll.github.io/docs/zh-CN/) （上拉加载、下拉刷新、Picker、鼠标滚轮、放大缩小、移动缩放、轮播图、滚动视觉差，放大镜）(监听 dom 的插件有坑，用 vueuse 代替！)
 
+## Canvas & SVG
+
+- [Fabric.js](http://fabricjs.com/) Javascript HTML5 canvas 工具库。
+
 ## 元素动画
 
 - [animejs](https://animejs.com/)
@@ -55,6 +59,9 @@
   - [leaflet.markercluster](https://www.npmjs.com/package/leaflet.markercluster) 标记聚类
   - [leaflet-heatmap.js](https://www.patrick-wied.at/static/heatmapjs/plugin-leaflet-layer.html) 热力图插件
 - [Openlayers](https://openlayers.org/) 开源，相比于 Leaflet 更加复杂和完备。
+- mapbox
+- 阿里的 l7
+- arcgis
 - [Cesium](https://www.cesium.com/) 三维地理可视化的常用库，在大尺度的可视化（地形、建筑、地球）中十分常用。
 - 高德地图 JS API
 - 百度地图 JS API

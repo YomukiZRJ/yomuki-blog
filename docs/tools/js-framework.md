@@ -33,6 +33,7 @@
 
 ## 构建工具
 
+- [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) Vue 的按需组件自动导入。支持 vite&webpack
 - [webpack](https://webpack.docschina.org/)
   - terser-webpack-plugin 体积优化 - 处理 js 的压缩和混淆，移除不需要的函数
   - compression-webpack-plugin 体积优化 - gzip 压缩

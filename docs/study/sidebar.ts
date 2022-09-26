@@ -49,6 +49,14 @@ export default [
     // collapsed: true,
     items: [
       {
+        text: "cesium学习记录",
+        link: "/study/other/cesium",
+      },
+      {
+        text: "Turf学习记录",
+        link: "/study/other/Turf",
+      },
+      {
         text: "GeoJSON学习记录",
         link: "/study/other/GeoJSON",
       },
