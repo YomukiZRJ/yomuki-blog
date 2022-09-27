@@ -5,6 +5,7 @@
 
 - [cesium 中文网](http://cesium.xin/)
 - [在线示例代码](https://sandcastle.cesium.com/)
+- [supermap - cesium](http://support.supermap.com.cn:8090/webgl/web/apis/3dwebgl.html)
 - [让 GIS 三维可视化变得简单-初识 Cesium](https://juejin.cn/post/6854573221191090189)
 - [沙箱权限问题](https://blog.csdn.net/ganggun/article/details/124825612)
 - [Cesium 加载在线地图服务](https://juejin.cn/post/7095293961283043336)

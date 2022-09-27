@@ -24,6 +24,14 @@ export default [
         text: "路由懒懒懒加载（按需载入）",
         link: "/study/vue/route-lazy-load",
       },
+      {
+        text: "provide-inject",
+        link: "/study/vue/provide-inject",
+      },
+      {
+        text: "vue2-to-vue3",
+        link: "/study/vue/vue2-to-vue3",
+      },
     ],
   },
   {

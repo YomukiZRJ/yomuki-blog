@@ -39,6 +39,10 @@ export default [
         link: "/tools/generate",
       },
       {
+        text: "vscode插件",
+        link: "/tools/vscode",
+      },
+      {
         text: "网页速成",
         link: "/tools/quick",
       },
