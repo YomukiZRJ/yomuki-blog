@@ -69,6 +69,10 @@ export default [
     text: "规范化",
     items: [
       {
+        text: "一次规范化记录",
+        link: "/framework/standardization/a-lint",
+      },
+      {
         text: "eslint",
         link: "/framework/standardization/eslint",
       },
