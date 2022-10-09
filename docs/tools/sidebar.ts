@@ -1,10 +1,3 @@
-/*
- * @Desc:
- * @Author: 曾茹菁
- * @Date: 2022-08-05 17:33:17
- * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-14 11:03:51
- */
 export default [
   {
     text: "库",

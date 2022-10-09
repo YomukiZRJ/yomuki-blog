@@ -60,8 +60,12 @@ export default [
         link: "/framework/node/fs-use",
       },
       {
-        text: "utils",
+        text: "utils工具函数",
         link: "/framework/node/utils",
+      },
+      {
+        text: "随手记-fs.lstatSync 和 fs.statSync",
+        link: "/framework/node/note-1",
       },
     ],
   },

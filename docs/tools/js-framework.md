@@ -10,10 +10,11 @@
 
 - [Tooling.Report](https://bundlers.tooling.report/) 构建工具对比平台
 
-## 包管理
+## npm 工具
 
 - [pnpm](https://www.pnpm.cn/)
 - [semver](https://www.npmjs.com/package/semver) npm 语义版本。用于检查 npm 版本
+- [npm-run-all](https://www.npmjs.com/package/npm-run-all) 用于并行或顺序运行多个 npm 脚本的 CLI 工具。有 Node Api
 
 ## cli 脚手架
 
@@ -34,6 +35,7 @@
 ## 构建工具
 
 - [unplugin-vue-components](https://www.npmjs.com/package/unplugin-vue-components) Vue 的按需组件自动导入。支持 vite&webpack
+- [unplugin-auto-import](https://www.npmjs.com/package/unplugin-auto-import) Vite, Webpack, Rollup and esbuil 的自动导入插件
 - [webpack](https://webpack.docschina.org/)
   - terser-webpack-plugin 体积优化 - 处理 js 的压缩和混淆，移除不需要的函数
   - compression-webpack-plugin 体积优化 - gzip 压缩
@@ -50,6 +52,7 @@
   - vue-loader/dist/index 定义过的其它规则复制并应用到 .vue 文件里相应语言
   - DefinePlugin 编译时配置全局变量 webpack5 内置
 - vite
+  - [vite-plugin-vue-layouts](https://www.npmjs.com/package/vite-plugin-vue-layouts) vue3 路由布局
 - [father](https://github.com/umijs/father) 配置简单，适合打包小工具
 
 ## 构建相关

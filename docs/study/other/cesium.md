@@ -10,6 +10,7 @@
 - [沙箱权限问题](https://blog.csdn.net/ganggun/article/details/124825612)
 - [Cesium 加载在线地图服务](https://juejin.cn/post/7095293961283043336)
 - [Cesium 对 viewer 对象初始化（包括项目初始视角设置以及去除 Cesium 版权信息等）](https://blog.csdn.net/qq_41176306/article/details/117549416)
+- [cesium 学习](https://www.wellyyss.cn/ys-cesium/#/)
 
 ## [快速开始](https://www.cesium.com/learn/cesiumjs-learn/cesiumjs-quickstart/)
 
