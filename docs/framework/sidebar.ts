@@ -85,6 +85,10 @@ export default [
         link: "/framework/standardization/stylelint",
       },
       {
+        text: "prettier",
+        link: "/framework/standardization/prettier",
+      },
+      {
         text: "git",
         link: "/framework/standardization/git",
       },
