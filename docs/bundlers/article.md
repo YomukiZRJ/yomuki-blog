@@ -10,3 +10,4 @@
 
 - [webpack5 打包资源优化](https://juejin.cn/post/7112627912632696845)
 - [基于 webpack4 的构建效率优化](https://juejin.cn/post/7127098334900125710)
+- [提高十倍 Webpack5.0 构建效率](https://juejin.cn/post/7153044974316027917#comment)

@@ -1,11 +1,15 @@
 [
   {
-    "text": "webpack3 -> 5 升级记录",
-    "link": "/bundlers/webpack/webpack3to5"
+    "text": "webpack构建优化总结",
+    "link": "/bundlers/webpack/build-optimization-all"
   },
   {
     "text": "webpack5配置记录",
     "link": "/bundlers/webpack/webpack5"
+  },
+  {
+    "text": "webpack3 -> 5 升级记录",
+    "link": "/bundlers/webpack/webpack3to5"
   },
   {
     "text": "webpack构建优化",

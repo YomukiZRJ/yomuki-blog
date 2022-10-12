@@ -1,14 +1,24 @@
-<!--
- * @Desc:
- * @Author: 曾茹菁
- * @Date: 2022-08-17 14:14:17
- * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-08-17 14:50:30
--->
-
 # webpack5 配置
 
 ...中文文档居然和我机翻的英文文档是一样的，救命
+
+## [devtool](https://webpack.docschina.org/configuration/devtool/#root)
+
+如何生成 source-map
+开发环境：
+| 值 | 构建 | 重构 | 质量 |
+| -------------------------------- | ---- | ---- | ------------------------------ |
+| eval | 快 | 最快 | 编译后的代码，每个模板单独文件 |
+| eval-source-map | 最慢 | 一般 | 原始代码 |
+| eval-cheap-source-map | 一般 | 快 | loader 后的代码 |
+| **eval-cheap-module-source-map** | 慢 | 快 | 原始代码 ，但列信息丢失 |
+
+生产环境：
+| 值 | 构建 | 重构 | 质量 |
+| ----------------- | ---- | ---- | ------------------------------------ |
+| none | 最快 | 最快 | 编译后的 |
+| source-map | 最慢 | 最慢 | 原始代码 |
+| hidden-source-map | 最慢 | 最慢 | 原始代码，但不会暴露给浏览器开发工具 |
 
 ## cache
 
