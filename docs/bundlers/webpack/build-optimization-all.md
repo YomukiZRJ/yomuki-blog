@@ -44,12 +44,12 @@ webpack5 自带了，webpack4 需手动安装。
 
 ## 高效构建
 
-## [esbuild-loader](https://github.com/privatenumber/esbuild-loader)
+### [esbuild-loader](https://github.com/privatenumber/esbuild-loader)
 
 使用 esbuild-loader 去替代非常耗时的 babel-loader、ts-loader 等 loader。  
 它把 esbuild 的能力包装成 Webpack 的 loader 来实现 Javascript、TypeScript、CSS 等资源的编译。以及提供更快的资源压缩方案。
 
-## 使用 ESBuild 进行压缩
+### 使用 ESBuild 进行压缩
 
 ```js
 module.exports = {
@@ -74,7 +74,7 @@ module.exports = {
 };
 ```
 
-## 使用 SWC 进行压缩
+### 使用 SWC 进行压缩
 
 ```js
 module.exports = {

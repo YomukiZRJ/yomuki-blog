@@ -1,22 +1,22 @@
 [
   {
     "text": "css中的百分号%",
-    "link": "/study-cssbaifenhao"
+    "link": "/study/css/baifenhao"
   },
   {
     "text": "rem",
-    "link": "/study-cssrem"
+    "link": "/study/css/rem"
   },
   {
     "text": "grid",
-    "link": "/study-cssgrid"
+    "link": "/study/css/grid"
   },
   {
     "text": "盒模型",
-    "link": "/study-cssbox"
+    "link": "/study/css/box"
   },
   {
     "text": "移动1像素",
-    "link": "/study-cssmobile1px"
+    "link": "/study/css/mobile1px"
   }
 ]
