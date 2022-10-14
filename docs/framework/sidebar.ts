@@ -89,6 +89,10 @@ export default [
         link: "/framework/standardization/prettier",
       },
       {
+        text: "commit",
+        link: "/framework/standardization/commit",
+      },
+      {
         text: "git",
         link: "/framework/standardization/git",
       },

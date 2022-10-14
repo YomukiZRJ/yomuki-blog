@@ -2,6 +2,9 @@
 /** @type {import('cz-git').UserConfig} */
 module.exports = {
   ignores: [commit => commit.includes("init")],
+  /**
+   * 拓展配置
+   */
   extends: ["@commitlint/config-conventional"],
   // parserPreset: "conventional-changelog-conventionalcommits",
   rules: {
