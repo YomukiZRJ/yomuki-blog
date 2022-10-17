@@ -1,6 +1,8 @@
 # webpack 构建优化总结
 
-![img](http://assets.yomuki.com/md/%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96.png)
+<image-box
+    src="http://assets.yomuki.com/md/%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96.png"
+  />
 
 ## 持久化缓存
 
