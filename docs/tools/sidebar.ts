@@ -40,6 +40,10 @@ export default [
         link: "/tools/quick",
       },
       {
+        trxt: "可视化开发",
+        link: "/tools/keshihua",
+      },
+      {
         trxt: "风格指南",
         link: "/tools/style-guide",
       },

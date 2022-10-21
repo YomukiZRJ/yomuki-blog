@@ -1,7 +1,7 @@
-# webpack 构建优化总结
+# webpack 构建效率优化总结
 
 <image-box
-    src="http://assets.yomuki.com/md/%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96.png"
+    src="http://assets.yomuki.com/md/webpackxiaolvyouhua.png"
   />
 
 ## 持久化缓存
@@ -21,6 +21,17 @@ module.exports = {
   },
 };
 ```
+
+```
+# 不开缓存
+webpack 5.74.0 compiled successfully in 830 ms
+# 开启缓存 第一次构建
+webpack 5.74.0 compiled successfully in 1562 ms
+# 开启缓存 第二次构建
+webpack 5.74.0 compiled successfully in 287 ms
+```
+
+修改 webpack 配置后为首次构建
 
 ### webpack4
 
@@ -44,14 +55,28 @@ webpack5 自带了，webpack4 需手动安装。
 
 允许并行运行多个 webpack 构建。需要多个入口文件，相当于同时开启多个 webpack。
 
-## 高效构建
+## 寻址优化
 
-### [esbuild-loader](https://github.com/privatenumber/esbuild-loader)
+合理设置 loader 的 exclude 和 include 属性。
+
+## [noParse](https://webpack.js.org/configuration/module/#modulenoparse)跳过编译
+
+跳过编译，对已经**提供了打包完成的库**。这个时候没必要重复进行依赖打包。所以可以通过 no-parse 跳过。忽略的文件中 不应该含有 import, require, define 的调用
+
+```js
+module.exports = {
+  module: {
+    noParse: /jquery|lodash|(^vue$)|(^pinia$)|(^vue-router$)/,
+  },
+};
+```
+
+## [esbuild-loader](https://github.com/privatenumber/esbuild-loader)
 
 使用 esbuild-loader 去替代非常耗时的 babel-loader、ts-loader 等 loader。  
 它把 esbuild 的能力包装成 Webpack 的 loader 来实现 Javascript、TypeScript、CSS 等资源的编译。以及提供更快的资源压缩方案。
 
-### 使用 ESBuild 进行压缩
+## 使用 ESBuild 进行压缩
 
 ```js
 module.exports = {
@@ -76,7 +101,7 @@ module.exports = {
 };
 ```
 
-### 使用 SWC 进行压缩
+## 使用 SWC 进行压缩
 
 ```js
 module.exports = {
@@ -94,7 +119,7 @@ module.exports = {
 };
 ```
 
-### [SourceMap](https://webpack.docschina.org/configuration/devtool/#root)
+## [SourceMap](https://webpack.docschina.org/configuration/devtool/#root)
 
 开发：
 
@@ -105,27 +130,7 @@ module.exports = {
 - noen 如果系统还没有异常监控系统，那省略。
   > terser-webpack-plugin 仅能在 source-map, inline-source-map, hidden-source-map and nosources-source-map 下使用
 
-## 精简作业
-
-减少不必要的编译步骤和对象。
-
-### 寻址优化
-
-合理设置 loader 的 exclude 和 include 属性。
-
-### [noParse](https://webpack.js.org/configuration/module/#modulenoparse)跳过编译
-
-跳过编译，对已经**提供了打包完成的 esm 文件的库**。这个时候没必要重复进行依赖打包。所以可以通过 no-parse 跳过。
-
-```js
-module.exports = {
-  module: {
-    noParse: /jquery|lodash|(^vue$)|(^pinia$)|(^vue-router$)/,
-  },
-};
-```
-
-### 开发阶段禁止产物优化
+## 开发阶段禁止产物优化
 
 - minimize 压缩
 - splitChunks 分包
@@ -148,11 +153,11 @@ module.exports = {
 };
 ```
 
-### [分模块构建](https://juejin.cn/post/7127098334900125710#heading-12)
+## [分模块构建](https://juejin.cn/post/7127098334900125710#heading-12)
 
-### eslint 忽略检查
+## eslint 忽略检查
 
-### 设置监听忽略目录
+## 设置监听忽略目录
 
 ```js
 module.exports = {

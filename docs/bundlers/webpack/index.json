@@ -1,7 +1,11 @@
 [
   {
-    "text": "webpack构建优化总结",
+    "text": "webpack构建效率优化",
     "link": "/bundlers/webpack/build-optimization-all"
+  },
+  {
+    "text": "webpack构建产物优化",
+    "link": "/bundlers/webpack/product-optimization"
   },
   {
     "text": "webpack5配置记录",

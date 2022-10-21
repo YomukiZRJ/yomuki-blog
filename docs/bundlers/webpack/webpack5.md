@@ -20,6 +20,19 @@
 | source-map | 最慢 | 最慢 | 原始代码 |
 | hidden-source-map | 最慢 | 最慢 | 原始代码，但不会暴露给浏览器开发工具 |
 
+## optimization
+
+### [chunkIds](https://webpack.docschina.org/configuration/optimization/#optimizationchunkids)
+
+生成模块 id 算法。  
+在开发环境下，默认为`named`。  
+在生产环境下，默认为`deterministic`。
+| 值 | 说明 | 示例 |
+| ------------- | ----------------------------------- | ---------------------------------------------- |
+| named | 对调试更友好的可读的 id，以路径生成 | `src_page_home_index_vue.e0bb29170b600d66ad4c` |
+| deterministic | 短数字 id，有益于长期缓存。 | `389.e1eea7d03c90c0e226af` |
+| natural | 按使用顺序的数组 id | |
+
 ## cache
 
 [中文文档](https://webpack.docschina.org/configuration/cache/)
