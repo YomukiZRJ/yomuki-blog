@@ -66,37 +66,4 @@ export default [
       },
     ],
   },
-  {
-    text: "规范化",
-    items: [
-      {
-        text: "一次规范化记录",
-        link: "/framework/standardization/a-lint",
-      },
-      {
-        text: "eslint",
-        link: "/framework/standardization/eslint",
-      },
-      {
-        text: "stylelint",
-        link: "/framework/standardization/stylelint",
-      },
-      {
-        text: "prettier",
-        link: "/framework/standardization/prettier",
-      },
-      {
-        text: "commit",
-        link: "/framework/standardization/commit",
-      },
-      {
-        text: "git",
-        link: "/framework/standardization/git",
-      },
-      {
-        text: "husky",
-        link: "/framework/standardization/husky",
-      },
-    ],
-  },
 ];

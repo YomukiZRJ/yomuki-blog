@@ -13,6 +13,7 @@ import frameworkSidebar from "../../framework/sidebar";
 import diarySidebar from "../../diary/sidebar";
 import informalEssaySidebar from "../../informal-essay/sidebar";
 import bundlersSidebar from "../../bundlers/sidebar";
+import infrastructureSidebar from "../../infrastructure/sidebar";
 const sidebar: DefaultTheme.Config["sidebar"] = {
   "/diary/": diarySidebar,
   "/quick-check/": quickCheckSidebar,
@@ -21,5 +22,6 @@ const sidebar: DefaultTheme.Config["sidebar"] = {
   "/framework/": frameworkSidebar,
   "/informal-essay/": informalEssaySidebar,
   "/bundlers/": bundlersSidebar,
+  "/infrastructure/": infrastructureSidebar,
 };
 export default sidebar;

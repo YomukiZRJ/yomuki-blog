@@ -1,4 +1,4 @@
-# js 库
+# js in browser 库
 
 ## 工具库
 
@@ -23,11 +23,11 @@
 
 ## 功能实现
 
-- [qrcodejs2](https://www.npmjs.com/package/qrcodejs2) 二维码生成。7 年前发布。
+- [qrcodejs2](https://www.npmjs.com/package/qrcodejs2) 二维码生成。
 - [clipboard](https://www.npmjs.com/package/clipboard) 剪切板
   - [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2) vue2 剪切板
-- [nprogress](https://www.npmjs.com/package/nprogress) 浏览器进度条。7 年前发布
-- [downloadjs](https://www.npmjs.com/package/downloadjs) 从浏览器下载文件。6 年前发布
+- [nprogress](https://www.npmjs.com/package/nprogress) 浏览器进度条。
+- [downloadjs](https://www.npmjs.com/package/downloadjs) 从浏览器下载文件。
 - [dom-to-image](https://www.npmjs.com/package/dom-to-image) 将任意 DOM 节点转换为矢量（SVG）或光栅（PNG 或 JPEG）图像
 - [html2canvas](https://www.npmjs.com/package/html2canvas) html 转 canvas
 
@@ -49,8 +49,6 @@
 
 - [SVGA](https://svga.io/index.html) SVGA 是一种同时兼容 iOS / Android / Flutter / Web 多个平台的动画格式。
 - [lottie](https://airbnb.io/lottie/#/README) 是一个适用于 Android、iOS、Web 和 Windows 的库，它解析 Adob​​e After Effects 动画，使用 Bodymovin 以 json 格式导出，并在移动设备和 Web 上本地呈现它们！
-- [gka](https://gka.js.org/#/) **node** 帧动画生成
-  d
 
 ## WebGIS(地理信息系统)
 
@@ -104,9 +102,7 @@
 - [TinyMCE](https://github.com/tinymce/tinymce) 插件多
 - [**CKEditor 5**](https://github.com/ckeditor/ckeditor5)
 
-## 文件
-
-### pdf
+## pdf
 
 - [pdf.js](https://github.com/mozilla/pdf.js) 解析和呈现 pdf
 - [jsPDF](https://github.com/parallax/jsPDF) 用 js 生成 pdf
@@ -114,9 +110,8 @@
 - [pdf-lib](https://github.com/Hopding/pdf-lib) 创建和修改 pdf
 - [pdfkit](https://www.npmjs.com/package/pdfkit) 生成 pdf。node/browser
 - [react-pdf](https://github.com/diegomura/react-pdf) pdf 生成 react 渲染器
-- [html-pdf](https://www.npmjs.com/package/html-pdf) html 变 pdf **node**
 
-### 图片
+## 图片
 
 - [sharp](https://github.com/lovell/sharp) Node.js 图像处理库，调整 JPEG、PNG、WebP、AVIF 和 TIFF 图像大小的最快模块。
 - [cropperjs](https://github.com/fengyuanchen/cropperjs) 图像裁剪器，支持 29 个裁剪选项、27 种方法、6 个事件、缩放、旋转等。
@@ -125,7 +120,7 @@
 - [viewerjs](https://github.com/fengyuanchen/viewerjs) 图像查看器，支持 52 个查看选项、23 种操作方法、17 个事件、旋转、移动、缩放等。
 - [omagesloaded](https://github.com/desandro/imagesloaded) 检查图像何时加载的 JavaScript 库。
 
-### 音视频
+## 音视频
 
 - [video.js](https://github.com/videojs/video.js) 为 HTML5 世界从头开始构建的网络视频播放器。它支持 HTML5 视频和媒体源扩展，以及其他播放技术，如 YouTube 和 Vimeo（通过插件）。它支持在台式机和移动设备上播放视频。
 - [plyr](https://github.com/sampotts/plyr) 是一个简单、轻量级、可访问和可定制的 HTML5、YouTube 和 Vimeo 媒体播放器，支持现代浏览器。
@@ -134,9 +129,9 @@
 - [DPlayer](https://github.com/DIYgod/DPlayer) HTML5 弹幕视频播放器，可帮助人们轻松构建视频和弹幕。
 - [Howler.js ](https://github.com/goldfire/howler.j) 现代 web 音频库。它默认为 Web Audio API 并回退到 HTML5 Audio。这使得在所有平台上使用 JavaScript 处理音频变得容易且可靠。
 
-### 表格
+## 表格
 
-- [Handsontable](https://github.com/handsontable/handsontable) 具有电子表格外观的 JavaScript 数据网格组件。适用于 React、Angular 和 Vue。它结合了数据网格功能和类似电子表格的 UX。它提供数据绑定、数据验证、过滤、排序和 CRUD 操作。
+- ⭐️[Handsontable](https://github.com/handsontable/handsontable) 具有电子表格外观的 JavaScript 数据网格组件。适用于 React、Angular 和 Vue。它结合了数据网格功能和类似电子表格的 UX。它提供数据绑定、数据验证、过滤、排序和 CRUD 操作。
 - [ag-grid ](https://github.com/ag-grid/ag-grid)功能齐全且高度可定制的 JavaScript 数据网格。它提供了出色的性能，没有第三方依赖，并且可以与所有主要 JavaScript 框架顺利集成。
 - [x-spreadsheet](https://github.com/myliang/x-spreadsheet) 基于 Web 的 JavaScript（canvas）电子表格。
 
@@ -144,9 +139,8 @@
 
 - [ExcelJS](https://github.com/exceljs/exceljs) Excel 电子表格文件逆向工程项目。可以读取，操作并写入电子表格数据和样式到 XLSX 和 JSON 文件。
 - [SheetJS](https://github.com/SheetJS/sheetjs) 简化的电子表格，用意用来阅读、编辑和导出电子表格，其适用于 Web 浏览器和服务器，在 Office 365 中受 Microsoft 信任。**node/browser**
-  - ⭐️[node-xlsx](https://www.npmjs.com/package/node-xlsx) 基于 SheetJS 的**node** excel 插件。只能生成 xlsx 格式
 
-### 文件上传
+## 文件上传
 
 - [Uppy](https://github.com/transloadit/uppy) （25.5⭐️）模块化 JavaScript 文件上传器，可与任何应用程序无缝集成。它速度快，具有易于理解的 API，让您不必担心比构建文件上传器更重要的问题。
 - [filepond](https://github.com/pqina/filepond) 用于上传文件的 JavaScript 库，优化图像以加快上传速度，并提供出色、可访问、如丝般流畅的用户体验。
@@ -155,11 +149,10 @@
 - [vue-upload-component ](https://github.com/lian-yue/vue-upload-component)用于 Vue.js 的上传组件，支持多文件上传，上传目录，拖拽上传，拖拽目录，以及支持同时上传多个文件等。
 - [Uppload](https://github.com/elninotech/uppload) JavaScript 图片上传器。它具有 30 多个插件的高度可定制性，完全免费和开源，并且可以与任何文件上传后端一起使用。
 
-### 其他
+## 文件相关其他
 
 - [JSZip](https://github.com/Stuk/jszip) 使用 JavaScript 创建、读取和编辑 .zip 文件的库，具有简单的 API。
 - [**docxtemplater**](https://github.com/open-xml-templating/docxtemplater)是一个从 docx/pptx 模板生成 docx/pptx 文档的库。它可以用数据替换 {placeholders} 并且还支持循环和条件。
-- [textract](https://github.com/dbashford/textract) 是一个 node.js 模块，用于从 html、pdf、doc、docx、xls、xlsx、csv、pptx、png、jpg、gif、rtf 等中提取文本。
 - [PptxGenJS](https://github.com/gitbrent/PptxGenJS) 是一个使用功能强大、简洁的 JavaScript API 创建 PowerPoint 演示文稿。
 - [PapaParse](https://github.com/mholt/PapaParse) 是一个快速而强大的 CSV（分隔文本）解析器，可以优雅地处理大文件和格式错误的输入。
 

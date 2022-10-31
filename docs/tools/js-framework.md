@@ -1,11 +1,3 @@
-<!--
- * @Desc:
- * @Author: 曾茹菁
- * @Date: 2022-08-14 11:02:32
- * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-09-01 12:19:44
--->
-
 # 架构库
 
 - [Tooling.Report](https://bundlers.tooling.report/) 构建工具对比平台
