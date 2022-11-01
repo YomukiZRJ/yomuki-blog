@@ -45,6 +45,7 @@
   - DefinePlugin 编译时配置全局变量 webpack5 内置
 - vite
   - [vite-plugin-vue-layouts](https://www.npmjs.com/package/vite-plugin-vue-layouts) vue3 路由布局
+  - [vite-plugin-mock](https://github.com/vbenjs/vite-plugin-mock) `vite2` 用于本地及开发环境数据 mock
 - [father](https://github.com/umijs/father) 配置简单，适合打包小工具
 
 ## 构建相关

@@ -16,6 +16,14 @@ export default [
     text: "规范化",
     items: [
       {
+        text: "命名规范",
+        link: "/infrastructure/standardization/name",
+      },
+      {
+        text: "git - commit msg 规范",
+        link: "/infrastructure/standardization/git-commit-msg",
+      },
+      {
         text: "一次规范化记录",
         link: "/infrastructure/standardization/a-lint",
       },
@@ -35,10 +43,7 @@ export default [
         text: "commit",
         link: "/infrastructure/standardization/commit",
       },
-      {
-        text: "git",
-        link: "/infrastructure/standardization/git",
-      },
+
       {
         text: "husky",
         link: "/infrastructure/standardization/husky",

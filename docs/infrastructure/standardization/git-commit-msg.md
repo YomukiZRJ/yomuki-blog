@@ -1,12 +1,4 @@
-<!--
- * @Desc:
- * @Author: 曾茹菁
- * @Date: 2022-08-31 13:44:40
- * @LastEditors: 曾茹菁
- * @LastEditTime: 2022-09-02 22:13:02
--->
-
-# git 提交规范
+# git commit msg 规范
 
 - **Subject** 一句话概述 commit 主题(必须)
 - **Body** 详细描述 What 和 Why (可选)
