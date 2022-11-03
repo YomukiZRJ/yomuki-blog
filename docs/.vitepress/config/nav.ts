@@ -36,6 +36,10 @@ const nav: DefaultTheme.Config["nav"] = [
         link: "/infrastructure/about",
       },
       {
+        text: "WebGL",
+        link: "/webgl/about",
+      },
+      {
         text: "架构 - 从入门到放弃",
         link: "/framework/",
       },

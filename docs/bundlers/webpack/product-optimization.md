@@ -52,7 +52,7 @@ export default {
 
 根据用户使用的环境按需打 polyfill 补丁。  
 以[Polyfill.io](https://polyfill.io/v3/)为代表。它提供了 CDN 服务，使用者可以根据所需环境生成包链接。  
-例如：https://polyfill.io/v3/polyfill.min.js?features=es2015。在业务中引入该包，则高版本的浏览器会返回空白，低版本浏览器会返回polyfill bundile。实现了按需打补丁。
+例如：[https://polyfill.io/v3/polyfill.min.js?features=es2015](https://polyfill.io/v3/polyfill.min.js?features=es2015)。在业务中引入该包，则高版本的浏览器会返回空白，低版本浏览器会返回 polyfill bundile。实现了按需打补丁。
 
 - [官网 CDN 服务](https://polyfill.io/v3/polyfill.min.js)
 - [阿里 CDN 服务](https://polyfill.alicdn.com/polyfill.min.js)

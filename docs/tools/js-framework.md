@@ -7,6 +7,7 @@
 - [pnpm](https://www.pnpm.cn/)
 - [semver](https://www.npmjs.com/package/semver) npm 语义版本。用于检查 npm 版本
 - [npm-run-all](https://www.npmjs.com/package/npm-run-all) 用于并行或顺序运行多个 npm 脚本的 CLI 工具。有 Node Api
+- [changesets](https://github.com/changesets/changesets) 用于 Monorepo 项目下版本以及 Changelog 文件管理的工具
 
 ## cli 脚手架
 

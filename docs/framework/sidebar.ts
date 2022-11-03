@@ -31,6 +31,10 @@ export default [
         text: "npm",
         link: "/framework/package/npm",
       },
+      {
+        text: "changesets - Monorepo 项目发包助手",
+        link: "/framework/package/changesets",
+      },
     ],
   },
   {
