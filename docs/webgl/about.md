@@ -35,3 +35,16 @@ GPU **渲染管线**的主要处理过程如下：
 - 片元：可理解为像素，像素着色阶段是在片元着色器中
 - 裁剪坐标系：是**顶点着色器**中的 `gl_Position` 内置变量接收到的坐标所在的坐标系。
 - 设备坐标系（NDC 坐标系）：是裁剪坐标系各个分量对 w 分量相除得到的坐标系，特点是 x、y、z 坐标分量的取值范围都在 【-1，1】之间，可以将它理解为边长为 2 的正方体，坐标系原点在正方体中心。
+
+## 基本图元
+
+- 点（`POINTS`）
+  - 一系列的点
+- 基本三角形（`TRIANGLES`）
+  - 绘制一个个独立的三角形，每三个点为一个三角形。如果提供了 6 个点，那就是两个三角形。绘制三角形的数量 = 顶点数 / 3
+- 三角带（`TRIANGLE_STRIP`）
+  - 如果提供 6 个点，则会绘制 4 个三角形，绘制三角形的数量 = 顶点数 - 2
+    ![img](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/1/22/16875b8e51710e48~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp)
+- 三角扇（`TRIANGLE_FAN`）
+  - 以第一个定点作为所有三角形的顶点进行绘制，绘制三角形的数量 = 顶点数 - 2
+    ![img](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/9/5/165a8dc2bb044266~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp)
