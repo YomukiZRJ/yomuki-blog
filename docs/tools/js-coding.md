@@ -102,6 +102,11 @@
 - [TinyMCE](https://github.com/tinymce/tinymce) 插件多
 - [**CKEditor 5**](https://github.com/ckeditor/ckeditor5)
 
+## word
+
+- [docx-preview](https://www.npmjs.com/package/docx-preview) docx 文件预览
+- onlyoffice
+
 ## pdf
 
 - [pdf.js](https://github.com/mozilla/pdf.js) 解析和呈现 pdf
@@ -148,6 +153,10 @@
 
 - [vue-upload-component ](https://github.com/lian-yue/vue-upload-component)用于 Vue.js 的上传组件，支持多文件上传，上传目录，拖拽上传，拖拽目录，以及支持同时上传多个文件等。
 - [Uppload](https://github.com/elninotech/uppload) JavaScript 图片上传器。它具有 30 多个插件的高度可定制性，完全免费和开源，并且可以与任何文件上传后端一起使用。
+
+## 文件下载
+
+- ⭐️[file-saver](https://www.npmjs.com/package/file-saver) 19.7k
 
 ## 文件相关其他
 
