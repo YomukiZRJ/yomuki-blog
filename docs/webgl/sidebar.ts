@@ -20,6 +20,10 @@ export default [
         link: "/webgl/basics/basics-01",
       },
       {
+        text: "基础02：三角形 & 缓存区",
+        link: "/webgl/basics/basics-02",
+      },
+      {
         text: "GLSL基础",
         link: "/webgl/basics/GLSL-01",
       },

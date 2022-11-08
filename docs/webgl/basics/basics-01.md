@@ -1,5 +1,10 @@
 # WebGL 基础：一个点 & 往着色器传递数据
 
+<image-box src="http://assets.yomuki.com/md/webgl/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png" />
+
+- [源码-绘制一个点](https://github.com/YomukiZRJ/study-webgl/tree/main/src/01%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E7%82%B9)
+- [源码-交互绘制点](https://github.com/YomukiZRJ/study-webgl/tree/main/src/02%E4%BA%A4%E4%BA%92%E7%BB%98%E5%88%B6%E7%82%B9)
+
 ## 源码
 
 定点着色器

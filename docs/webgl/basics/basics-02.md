@@ -11,7 +11,30 @@
   - 以第一个定点作为所有三角形的顶点进行绘制，绘制三角形的数量 = 顶点数 - 2
     ![img](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/9/5/165a8dc2bb044266~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp)
 
-## 创建缓冲区
+## 着色器
+
+```html
+<script type="shader-source" id="vertexShader">
+  precision mediump float;
+  attribute vec2 a_Position;
+  attribute vec2 a_Screen_Size;
+  void main(){
+   gl_Position = vec4(a_Position, 0.0, 1.0);
+  }
+</script>
+<script type="shader-source" id="fragmentShader">
+  precision mediump float;
+  uniform vec4 u_Color;
+  void main(){
+    vec4 color = u_Color / vec4(255, 255, 255, 1);
+    gl_FragColor = color;
+  }
+</script>
+```
+
+## 缓冲区 & 写入数据 & 如何读取数据
+
+<image-box src="http://assets.yomuki.com/md/webgl/%E7%BC%93%E5%86%B2%E5%8C%BA%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png" />
 
 ```js
 // 三角形三个顶点
@@ -20,6 +43,8 @@ const positions: [number] = [1, 0, 0, 1, 0, 0];
 const buffer: WebGLBuffer = gl.createBuffer();
 // 将刚刚创建的缓冲区绑定为当前顶点属性缓冲区
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+// 激活属性
+gl.enableVertexAttribArray(aPosition);
 // 往当前缓冲区写入数据
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 ```
@@ -29,19 +54,20 @@ gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
   - `gl.ARRAY_BUFFER` 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。
   - `gl.ELEMENT_ARRAY_BUFFER` 用于元素索引的 Buffer。
   - `new Float32Array(positions)` 将顶点数组转化为更严谨的类型化数组。
-  - `gl.bufferData(target, data, usage)`创建并初始化了 Buffer 对象的数据存储区。
-    - target ： 指定 Buffer 绑定点（`gl.ARRAY_BUFFER` `gl.ELEMENT_ARRAY_BUFFER`）
-    - data ： 数据。如果为 null，数据存储区仍会被创建，但是不会进行初始化和定义。
-    - usage：指定数据存储区的使用方法。
-      - `gl.STATIC_DRAW` 缓冲区的内容可能经常使用，而不会经常更改。内容被写入缓冲区，但不被读取。
-      - `gl.DYNAMIC_DRAW` 缓冲区的内容可能经常被使用，并且经常更改。内容被写入缓冲区，但不被读取。
-      - `gl.STREAM_DRAW` 缓冲区的内容可能不会经常使用。内容被写入缓冲区，但不被读取。
+- `gl.bufferData(target, data, usage)`创建并初始化了 Buffer 对象的数据存储区。
+  - target ： 指定 Buffer 绑定点（`gl.ARRAY_BUFFER` `gl.ELEMENT_ARRAY_BUFFER`）
+  - data ： 数据。如果为 null，数据存储区仍会被创建，但是不会进行初始化和定义。
+  - usage：指定数据存储区的使用方法。
+    - `gl.STATIC_DRAW` 缓冲区的内容可能经常使用，而不会经常更改。内容被写入缓冲区，但不被读取。
+    - `gl.DYNAMIC_DRAW` 缓冲区的内容可能经常被使用，并且经常更改。内容被写入缓冲区，但不被读取。
+    - `gl.STREAM_DRAW` 缓冲区的内容可能不会经常使用。内容被写入缓冲区，但不被读取。
+- `gl.enableVertexAttribArray(index)` 激活属性
 
-## 从缓冲区读取数据
+### 从缓冲区读取数据
 
 ```js
 /**
- * 从缓冲区读取数据
+ * 将属性绑定到当前缓冲区，并设置如何读取
  */
 function readBuffer() {
   // 每次读取两个数据
@@ -87,4 +113,82 @@ function drawTriangle() {
   // 绘制三角形
   gl.drawArrays(gl.TRIANGLES, offset, count);
 }
+```
+
+## 动态绘制
+
+```js
+canvas.addEventListener("click", (e: MouseEvent) => {
+  const { pageX, pageY } = e;
+  positions.push(pageX, pageY);
+  // 每有三个点
+  if (positions.length % 6 === 0) {
+    console.log(positions);
+    // 向缓冲区中复制新的顶点数据。
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.DYNAMIC_DRAW);
+    // 设置三角形颜色
+    setColor();
+    // 重新渲染
+    render();
+  }
+});
+/**
+ * 设置片元着色
+ */
+function setColor() {
+  const color = randomColor();
+  gl.uniform4f(uColor, color.r, color.g, color.b, color.a);
+}
+function render() {
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  gl.drawArrays(gl.TRIANGLES, 0, positions.length / 2);
+}
+```
+
+## 不同颜色的三角形
+
+在顶点着色器中，定义一个`attribute`变量 a_Color，用来接收缓冲区数据。
+
+```
+attribute vec4 a_Color;
+```
+
+在顶点和片元着色器中，定义一个`varying`变量 v_Color，用来将顶点着色器中的变量传递至片元着色器
+
+```
+varying vec4 v_Color;
+v_Color = a_Color
+```
+
+创建颜色缓冲区
+
+```js
+const colors: [number] = [];
+const colorBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+gl.enableVertexAttribArray(aColor);
+gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, 0, 0);
+```
+
+在往缓存区写入数据前，切换缓存区
+
+```js
+// 切换至顶点坐标缓存区
+gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.DYNAMIC_DRAW);
+// 切换至顶点颜色缓存区
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW);
+```
+
+## tips
+
+在使用多个缓存区时，在往不同缓存区绑定属性，写入数据前，都需要将对应的缓存区绑定至当前缓存区`bindBuffer`。
+
+```js
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW);
+
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, 0, 0);
 ```
