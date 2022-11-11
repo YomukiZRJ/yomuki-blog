@@ -6,6 +6,7 @@
 - [又是回流重绘](https://juejin.cn/post/7013131773756309517)
 - [一篇文章搞懂前端兼容问题](https://juejin.cn/post/7130435421904830494)
 - [图解浏览器渲染原理和流程](https://mp.weixin.qq.com/s/9GMk0kFTHyTW_UrL0svNpQ)
+- [缓存 CORS 请求](https://httptoolkit.com/blog/cache-your-cors/) CORS 是跨域 HTTP 请求，实际会发出两个 HTTP 请求（预检请求 + 正式请求）。很多云服务商按请求数计费，这将大大增加费用，本文介绍如何在客户端缓存 CORS 请求，避免过多的请求。
 
 ## css
 

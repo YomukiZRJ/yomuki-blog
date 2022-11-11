@@ -19,6 +19,7 @@
 
 - [色彩笔 - 图片压缩](https://www.secaibi.com/tools/%e5%9c%a8%e7%ba%bf%e5%9b%be%e7%89%87%e5%8e%8b%e7%bc%a9/)
 - [tinypng](https://tinypng.com/) 在线压缩
+- [将图片变清晰](https://github.com/upscayl/upscayl)
 
 ## 图片生成
 
@@ -45,3 +46,7 @@
 ## 查询
 
 - [caniuse](https://caniuse.com/)
+
+## 其他
+
+- [vtui-npm](https://github.com/webfansplz/vtui-npm) 命令行工具，互动搜索 npm 库

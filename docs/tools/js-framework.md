@@ -1,6 +1,7 @@
 # 架构库
 
 - [Tooling.Report](https://bundlers.tooling.report/) 构建工具对比平台
+- [Bun](https://bun.sh/) js/ts 运行环境，兼容 Node.js 的所有 API，运行速度大大快于 Node.js。
 
 ## npm 工具
 
