@@ -1,5 +1,10 @@
 # WebGL 基础：三角形和缓冲区
 
+- 💡 绘制三角形
+- 💡 缓存区基本使用
+- 💡 使用多个缓存区读取多个数据
+- 💡 使用一个缓存区读取多个数据
+
 ## 三角形
 
 - 基本三角形（`TRIANGLES`）
@@ -101,6 +106,8 @@ function readBuffer() {
 
 ## 绘制三角形
 
+[源码](https://github.com/YomukiZRJ/study-webgl/tree/main/src/03%E4%B8%89%E8%A7%92%E5%BD%A2)
+
 ```js
 /**
  * 绘制三角形
@@ -116,6 +123,8 @@ function drawTriangle() {
 ```
 
 ## 动态绘制
+
+[源码](https://github.com/YomukiZRJ/study-webgl/tree/main/src/04%E5%8A%A8%E6%80%81%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2)
 
 ```js
 canvas.addEventListener("click", (e: MouseEvent) => {
@@ -146,6 +155,8 @@ function render() {
 ```
 
 ## 不同颜色的三角形
+
+[源码](https://github.com/YomukiZRJ/study-webgl/tree/main/src/05%E4%B8%8D%E5%90%8C%E9%A2%9C%E8%89%B2%E4%B8%89%E8%A7%92%E5%BD%A2)
 
 在顶点着色器中，定义一个`attribute`变量 a_Color，用来接收缓冲区数据。
 
@@ -191,4 +202,32 @@ gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW);
 
 gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
 gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, 0, 0);
+```
+
+## 使用单个 buffer 读取多种顶点数据
+
+[源码](https://github.com/YomukiZRJ/study-webgl/tree/main/src/07%E4%BD%BF%E7%94%A8%E5%8D%95%E4%B8%AAbuffer%E8%AF%BB%E5%8F%96%E5%A4%9A%E7%A7%8D%E6%95%B0%E6%8D%AE)
+
+顶点坐标和颜色存在一起：
+
+```js
+const { pageX, pageY } = e;
+const color = randomColor();
+positions.push(pageX, pageY, color.a, color.g, color.b, color.a);
+```
+
+positions 中的数据就是：x,y,r,g,b,a,x,y,r,g,b,a,x,y,r,g,b,a。
+
+每 6 个长度代表一个三角形的顶点数据。
+
+然后修改缓存区的读取：
+
+```js
+// 代表一个顶点信息所占用的字节数
+const stride = 4 * 6; // 6个元素 每个元素占4字节
+// 设置顶点坐标读取
+gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, stride, 0);
+// 设置颜色读取
+const colorOffset = 4 * 2; // 读取颜色元素的时偏移量，顶点坐标占用2个元素，每个元素4字节
+gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, stride, colorOffset);
 ```

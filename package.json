@@ -9,7 +9,7 @@
     "serve": "vitepress serve docs",
     "prepare": "husky install",
     "lint:lint-staged": "lint-staged",
-    "commit": "git add . && git-cz",
+    "commit": "git-cz",
     "cli:add": "pnpm run cli:add --filter yomuki-blog-cli"
   },
   "author": "yomuki",

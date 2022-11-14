@@ -24,6 +24,10 @@ export default [
         link: "/webgl/basics/basics-02",
       },
       {
+        text: "基础03：画个矩形",
+        link: "/webgl/basics/basics-03",
+      },
+      {
         text: "GLSL基础",
         link: "/webgl/basics/GLSL-01",
       },
