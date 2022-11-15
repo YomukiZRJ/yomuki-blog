@@ -40,6 +40,10 @@ const nav: DefaultTheme.Config["nav"] = [
         link: "/webgl/about",
       },
       {
+        text: "WebGIS",
+        link: "/webgis/about",
+      },
+      {
         text: "架构 - 从入门到放弃",
         link: "/framework/",
       },

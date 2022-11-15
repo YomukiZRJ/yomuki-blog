@@ -8,6 +8,7 @@ import informalEssaySidebar from "../../informal-essay/sidebar";
 import bundlersSidebar from "../../bundlers/sidebar";
 import infrastructureSidebar from "../../infrastructure/sidebar";
 import webglSidebar from "../../webgl/sidebar";
+import webgisSidebar from "../../webgis/sidebar";
 const sidebar: DefaultTheme.Config["sidebar"] = {
   "/diary/": diarySidebar,
   "/quick-check/": quickCheckSidebar,
@@ -18,5 +19,6 @@ const sidebar: DefaultTheme.Config["sidebar"] = {
   "/bundlers/": bundlersSidebar,
   "/infrastructure/": infrastructureSidebar,
   "/webgl/": webglSidebar,
+  "/webgis/": webgisSidebar,
 };
 export default sidebar;

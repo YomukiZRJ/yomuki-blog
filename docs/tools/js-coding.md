@@ -57,6 +57,9 @@
 - [leafletjs](https://leafletjs.com/) 二维，开源、体积小、结构清晰、简单易用
   - [leaflet.markercluster](https://www.npmjs.com/package/leaflet.markercluster) 标记聚类
   - [leaflet-heatmap.js](https://www.patrick-wied.at/static/heatmapjs/plugin-leaflet-layer.html) 热力图插件
+  - [@geoman-io/leaflet-geoman-free](https://www.npmjs.com/package/@geoman-io/leaflet-geoman-free) 绘图插件 leaflet.pm 的替代品
+  - leaflet-geosearch 地址搜索插件
+  - leaflet-ellipse 椭圆
 - [Openlayers](https://openlayers.org/) 开源，相比于 Leaflet 更加复杂和完备。
 - mapbox
 - 阿里的 l7
