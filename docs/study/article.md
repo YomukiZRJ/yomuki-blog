@@ -12,6 +12,10 @@
 
 - [css 方法论](https://juejin.cn/post/7113732818663899166)
 
+## javaScript
+
+- [JavaScript 错误处理完整指南](https://mp.weixin.qq.com/s/txh_oJGQFlV_VR7NsoU5nA)
+
 ## ts
 
 - [ts 配置文件](https://mp.weixin.qq.com/s/pxbQbvZP2IWMQzA7v8YV4w)
