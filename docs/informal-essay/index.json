@@ -1,5 +1,9 @@
 [
   {
+    "text": "如何获取vue自定义组件为HTMLElement",
+    "link": "/informal-essay/vue-to-element"
+  },
+  {
     "text": "关于要分别打包mgop和axios情况下的构建",
     "link": "/informal-essay/20220822"
   },

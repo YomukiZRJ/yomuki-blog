@@ -16,6 +16,10 @@ export default [
     text: "WebGL基础",
     items: [
       {
+        text: "GLSL基础",
+        link: "/webgl/basics/GLSL-01",
+      },
+      {
         text: "基础01：一个点 & 往着色器传递数据",
         link: "/webgl/basics/basics-01",
       },
@@ -28,8 +32,8 @@ export default [
         link: "/webgl/basics/basics-03",
       },
       {
-        text: "GLSL基础",
-        link: "/webgl/basics/GLSL-01",
+        text: "基础04：纹理贴图",
+        link: "/webgl/basics/basics-04",
       },
     ],
   },
