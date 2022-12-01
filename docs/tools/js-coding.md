@@ -6,13 +6,19 @@
 - [underscorejs](https://underscorejs.net/#) 函数式编程的实用功能
 - [outils](https://www.npmjs.com/package/outils) 业务代码工具库(用来学习挺不错的，然后自己整一个)
 - [ramda](https://www.npmjs.com/package/ramda) 实用函数库，有[中文文档](https://ramda.cn/)，从不改变用户已有数据
-- [nanoid](https://gitee.com/mirrors/nanoid) 唯一 id 生成
-- [uuid](https://www.npmjs.com/package/uuid) uuid 生成。commonJs/ESM
-- [crypto-js](https://www.npmjs.com/package/crypto-js) 加密
-- [md5](https://www.npmjs.com/package/md5) md5
-- [jsencrypt](https://www.npmjs.com/package/jsencrypt) RSA 加密
 - [classnames](https://www.npmjs.com/package/classnames) 类名连接
-- [query-string](https://www.npmjs.com/package/query-string) 解析和 stringify URL 查询字符串
+- 从数据解析
+  - [query-string](https://www.npmjs.com/package/query-string) 解析和 stringify URL 查询字符串
+  - [filesize](https://www.npmjs.com/package/filesize) 从 number、string 解析文件大小
+- uuid 生成
+  - [nanoid](https://gitee.com/mirrors/nanoid) 唯一 id 生成
+  - [uuid](https://www.npmjs.com/package/uuid) uuid 生成。commonJs/ESM
+- 加密
+  - [crypto-js](https://www.npmjs.com/package/crypto-js) 加密
+  - [md5](https://www.npmjs.com/package/md5) md5
+  - [jsencrypt](https://www.npmjs.com/package/jsencrypt) RSA 加密
+- 数据格式化
+  - [numeraljs](http://numeraljs.com/) 格式化数字
 
 ## API 拓展
 
@@ -30,10 +36,25 @@
 - [downloadjs](https://www.npmjs.com/package/downloadjs) 从浏览器下载文件。
 - [dom-to-image](https://www.npmjs.com/package/dom-to-image) 将任意 DOM 节点转换为矢量（SVG）或光栅（PNG 或 JPEG）图像
 - [html2canvas](https://www.npmjs.com/package/html2canvas) html 转 canvas
+- [favico.js](http://lab.ejci.net/favico.js/) favicon with badges, images or videos
 
-## 滚动
+## 交互
 
-- [BetterScroll](https://better-scroll.github.io/docs/zh-CN/) （上拉加载、下拉刷新、Picker、鼠标滚轮、放大缩小、移动缩放、轮播图、滚动视觉差，放大镜）(监听 dom 的插件有坑，用 vueuse 代替！)
+- [hammerjs](http://hammerjs.github.io/getting-started/) 手势事件插件、体积小
+  - 识别由触摸、鼠标和指针事件做出的手势。
+
+### 滚动
+
+- [scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed) 滚动插件、滚动到需要显示的地方。
+  - **原生滚动条**
+- [BetterScroll](https://better-scroll.github.io/docs/zh-CN/) 滚动插件、**重点移动端**，支持 PC
+  - 有滚动条美化
+  - 上拉加载、下拉刷新、Picker、鼠标滚轮、放大缩小、移动缩放、轮播图、滚动视觉差，放大镜
+  - 监听 dom 的插件有坑，用 vueuse 代替
+  - 插件体积较大
+- [perfect-scrollbar](https://www.npmjs.com/package/perfect-scrollbar) 完美滚动条，定义滚动条样式
+  - 插件体积有点大
+  - 侵入小
 
 ## Canvas & SVG
 
@@ -169,6 +190,7 @@
 - [PptxGenJS](https://github.com/gitbrent/PptxGenJS) 是一个使用功能强大、简洁的 JavaScript API 创建 PowerPoint 演示文稿。
 - [PapaParse](https://github.com/mholt/PapaParse) 是一个快速而强大的 CSV（分隔文本）解析器，可以优雅地处理大文件和格式错误的输入。
 
-## 测试
+## 测试&调试
 
 - [Vitest](https://cn.vitest.dev/) vite 提供的单元测试框架，兼容 jest，中文文档
+- [vConsole](https://github.com/Tencent/vConsole/blob/HEAD/README_CN.md) 移动 web 调试面板

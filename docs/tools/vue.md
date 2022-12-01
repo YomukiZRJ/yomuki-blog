@@ -3,7 +3,9 @@
 - [官网论坛](https://forum.vuejs.org/)
 - [vue 资源站](https://github.com/vuejs/awesome-vue)
 
-##
+## 交互
+
+- [vue3-infinite-list](https://github.com/tnfe/vue3-infinite-list) 支持百万量级的`vue3无`限滚动组件
 
 ## 状态管理
 

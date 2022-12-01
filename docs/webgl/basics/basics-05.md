@@ -86,6 +86,13 @@ const cubeFaceColors = [
 - `模型变换`：可以让立方体转动
 - `投影变换`：可以让立方体以正常比例渲染到目标设备
 
+在顶点着色器中定义变换矩阵，将变换矩阵左乘顶点坐标。
+
+```
+uniform mat4 u_Matrix;
+ gl_Position =  u_Matrix * vec4(a_Position, 1);
+```
+
 ## 小结：
 
 - 💡 WebGL 坐标系。

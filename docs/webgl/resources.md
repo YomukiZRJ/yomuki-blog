@@ -4,3 +4,9 @@
 
 - [一文入门游戏开发语言之 webgl 中的 glsl 语言](https://juejin.cn/post/7085587372565332004)
 - [WebGL 教程](https://blog.csdn.net/u014291990/article/details/102980860)
+- [通俗易懂](https://blog.csdn.net/weixin_44867717/category_11251206_3.html)
+
+## three 相关
+
+- [仓库](https://github.com/mrdoob/three.js)
+- [three.js 教程](http://www.webgl3d.cn/Three.js/)
