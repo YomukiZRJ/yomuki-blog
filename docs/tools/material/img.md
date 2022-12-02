@@ -2,6 +2,7 @@
 
 - [有趣的 404](https://error404.fun/)
 - [文生图](https://wenxin.baidu.com/moduleApi/ernieVilg) 通过文字描述生成图片，有 API 接口
+- [生成各种三角形拼接而成的背景图片](https://trianglify.io/)
 
 ## icon
 
