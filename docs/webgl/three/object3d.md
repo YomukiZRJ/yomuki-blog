@@ -94,6 +94,87 @@ const scene = new THREE.Scene();
   - 半球光 [HemisphereLight](https://threejs.org/docs/index.html#api/zh/lights/HemisphereLight)
     - 不能投射阴影。光照颜色从天空光线颜色渐变到地面光线颜色。
 
-## 辅助工具
+## 子类 - 物体
 
-- 空间坐标轴 [AxesHelper](https://threejs.org/docs/index.html?q=AxesHelper#api/zh/helpers/AxesHelper)
+### [Points](https://threejs.org/docs/index.html#api/zh/objects/Points)
+
+用于显示点（`gl.POINTS`）的类。
+
+```js
+new THREE.Points(THREE.BufferGeometry, THREE.PointsMaterial);
+```
+
+```js
+const points = new THREE.Points(new THREE.SphereGeometry(50), new THREE.PointsMaterial({ color: 0xffff00 }));
+points.position.set(-100, 100, 100);
+```
+
+### [Line](https://threejs.org/docs/index.html#api/zh/objects/Line)
+
+用于显示连续的线（`gl.LINE_STRIP`上一个点连下一个点）的类。
+
+```js
+new THREE.Line(THREE.BufferGeometry, THREE.LineBasicMaterial);
+```
+
+基于`Line`的物体类：
+
+- [LineLoop](https://threejs.org/docs/index.html#api/zh/objects/LineLoop) 环线。使用`gl.LINE_LOOP`渲染，线的头尾相接。
+- [LineSegments](https://threejs.org/docs/index.html#api/zh/objects/LineSegments) 线段。使用`gl.LINES`渲染，两点一线。
+  - 空间坐标轴 [AxesHelper](https://threejs.org/docs/index.html?q=AxesHelper#api/zh/helpers/AxesHelper)
+
+### [Mesh](https://threejs.org/docs/index.html#api/zh/objects/Mesh)
+
+基于三角形为多边形网格的物体类。
+
+基于`Mesh`的类：
+
+- [InstancedMesh](https://threejs.org/docs/index.html#api/zh/objects/InstancedMesh) 实例化网格
+  - 可以用来渲染大量具有相同几何体、材质，但是不同变换的物体。
+    ```js
+    const instanced = new THREE.InstancedMesh(
+      new THREE.BoxGeometry(50, 50, 50),
+      new THREE.MeshBasicMaterial({ color: 0xffff00, transparent: true, opacity: 0.5 }),
+      4
+    );
+    const matrix = new THREE.Matrix4();
+    const position = new THREE.Vector3();
+    const rotation = new THREE.Euler();
+    const quaternion = new THREE.Quaternion();
+    const scale = new THREE.Vector3();
+    for (let i = 0; i < instanced.count; i++) {
+      position.x = Math.random() * 100 - 50;
+      position.y = Math.random() * 100 - 50;
+      position.z = Math.random() * 100 - 50;
+      rotation.x = Math.random() * 2 * Math.PI;
+      rotation.y = Math.random() * 2 * Math.PI;
+      rotation.z = Math.random() * 2 * Math.PI;
+      quaternion.setFromEuler(rotation);
+      scale.x = scale.y = scale.z = Math.random() * 1;
+      matrix.compose(position, quaternion, scale);
+      instanced.setMatrixAt(i, matrix);
+    }
+    instanced.position.set(-100, 100, 0);
+    scene.add(instanced);
+    ```
+
+## 子类 - 组 - Group
+
+[Group](https://threejs.org/docs/index.html#api/zh/objects/Group) 用来聚集一些 object3D 对象。
+
+```js
+const points = new THREE.Points(new THREE.SphereGeometry(50), new THREE.PointsMaterial({ color: 0xffff00 }));
+points.position.set(-100, 100, 100);
+const line = new THREE.Line(
+  new THREE.BoxGeometry(50, 50, 50),
+  new THREE.LineBasicMaterial({
+    color: 0xffff00,
+  })
+);
+/**
+ * 组
+ */
+const group = new THREE.Group();
+group.add(points, line);
+scene.add(group);
+```
