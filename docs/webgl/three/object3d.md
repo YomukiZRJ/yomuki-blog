@@ -45,6 +45,7 @@ const scene = new THREE.Scene();
 - Camera 抽象基类
   - [PerspectiveCamera](https://threejs.org/docs/index.html#api/zh/cameras/PerspectiveCamera) 透视相机
     - 使用**透视投影**，用来模拟人眼所看到的景象。
+    - 参数 1：垂直视野。
   - [OrthographicCamera](https://threejs.org/docs/index.html#api/zh/cameras/OrthographicCamera) 正交相机
     - 使用**正交投影**，不论相机距离物体远近，渲染出来的物体大小不变，渲染 2D 场景或者 UI 元素。
 
