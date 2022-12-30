@@ -10,3 +10,9 @@
 
 - [仓库](https://github.com/mrdoob/three.js)
 - [three.js 教程](http://www.webgl3d.cn/Three.js/)
+
+## 贴图资源
+
+- [Hdris](https://polyhaven.com/hdris) 环境贴图
+  - [HDRI 转为立方体贴图](https://matheowis.github.io/HDRI-to-CubeMap/)
+- [textures](https://polyhaven.com/textures) 纹理贴图

@@ -8,33 +8,34 @@
   - `vertexColors` 是否使用定点着色，默认 false。开启的时候记得把 color 属性给嘎了
   - `visible` 材质是否可见，默认 false
 
-## 网格材质 Mesh
+## 材质类型
 
-- 基础网格材质 [MeshBasicMaterial](https://threejs.org/docs/index.html#api/zh/materials/MeshBasicMaterial)
-
-  - 不受光照影响。
-
-- Lambert 网格材质 [MeshLambertMaterial](https://threejs.org/docs/index.html#api/zh/materials/MeshLambertMaterial)
-
-  - 与光照有反应，漫反射，**非光泽表面** 的材质，没有镜面高光。
-  - 该材质使用基于非物理的 Lambertian 模型来计算反射率。很好地模拟一些表面（例如未经处理的木材或石材），但不能模拟具有镜面高光的光泽表面（例如涂漆木材）。
-  - 构造属性
-    - 是否将几何体渲染为线框 `wireframe`:false
-
-- Phong 网格材质 [MeshPhongMaterial](https://threejs.org/docs/?q=MeshPhongMaterial#api/zh/materials/MeshPhongMaterial)
-
-  - 具有镜面高光的光泽表面的材质
-
-  - 构造属性
+- 网格材质 Mesh
+  - [MeshBasicMaterial](https://threejs.org/docs/index.html#api/zh/materials/MeshBasicMaterial)基础网格材质
+    - 光照无效
+  - MeshNormalMaterial 法线网格材质
+    - 光照无效
+    - 什么是法线？物体外侧的向量方向（关乎到关照，反射）
+    - 一般用于调试法线
+  - MeshMatcapMaterial
+    - 光照无效
+    - 根据法线选择正确的颜色
+    - 根据纹理图片渲染明暗，在没有光源的情况下，物体也会呈现出明暗面
+    - `matcap` 设置纹理
+  - MeshDepthMaterial 深度网格材质
+    - 光照无效
+    - 深度基于相机远近平面。白色最近，黑色最远。
+  - [MeshLambertMaterial](https://threejs.org/docs/index.html#api/zh/materials/MeshLambertMaterial)Lambert 网格材质
+    - 光照有效，漫反射，**非光泽表面** 的材质，没有镜面高光。
+    - 模拟地表（例如未经处理的木材或石材）
+  - [MeshPhongMaterial](https://threejs.org/docs/?q=MeshPhongMaterial#api/zh/materials/MeshPhongMaterial)Phong 网格材质
+    - 光照有效，镜面高光
     - 高光颜色 `specular`
     - 高亮程度 越高越亮 `shininess`
-
-- 标准网格材质 [MeshStandardMaterial](https://threejs.org/docs/index.html#api/zh/materials/MeshStandardMaterial)
-
-  - PBR 物理材质，更好的模拟**金属、玻璃**等效果。拥有更精确和逼真的结果，代价是计算成本更高。
-
-## 点材质
-
-用于渲染点的材质。
-
-- 点材质 [PointsMaterial](https://threejs.org/docs/index.html?q=Point#api/zh/materials/PointsMaterial)
+  - MeshToonMaterial 卡通阴影效果的材质
+  - [MeshStandardMaterial](https://threejs.org/docs/index.html#api/zh/materials/MeshStandardMaterial)标准网格材质
+    - PBR 物理材质，模拟金属、玻璃，精准和逼真，计算成本高
+  - MeshPhysicalMaterial 物理网格材质
+    - MeshStandardMaterial 的扩展，提供了更高级的基于物理的渲染属性
+    - 外层有个透明样的图层
+- [PointsMaterial](https://threejs.org/docs/index.html?q=Point#api/zh/materials/PointsMaterial)点材质
