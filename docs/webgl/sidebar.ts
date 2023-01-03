@@ -13,7 +13,7 @@ export default [
     ],
   },
   {
-    text: "WebGL基础",
+    text: "WebGL笔记",
     items: [
       {
         text: "GLSL基础",
@@ -34,6 +34,35 @@ export default [
       {
         text: "基础04：纹理贴图",
         link: "/webgl/basics/basics-04",
+      },
+    ],
+  },
+  {
+    text: "three.js笔记",
+    items: [
+      {
+        text: "basics-01",
+        link: "/webgl/three/basics-01",
+      },
+      {
+        text: "object3d",
+        link: "/webgl/three/object3d",
+      },
+      {
+        text: "缓冲几何体",
+        link: "/webgl/three/bufferGeometry",
+      },
+      {
+        text: "材质",
+        link: "/webgl/three/material",
+      },
+      {
+        text: "纹理",
+        link: "/webgl/three/textures",
+      },
+      {
+        text: "灯光",
+        link: "/webgl/three/lights",
       },
     ],
   },
