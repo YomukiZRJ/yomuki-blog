@@ -8,3 +8,19 @@
 ## 一些角度
 
 - `Math.PI / 4 `90 度
+
+## 一些动画
+
+- x,y 轴上逆时针画圆
+
+```js
+position.x = Math.sin(elapsedTime) * 半径;
+position.z = Math.cos(elapsedTime) * 半径;
+```
+
+- x,y 轴上顺时针画圆
+
+```js
+position.x = Math.cos(elapsedTime) * 半径;
+position.z = Math.sin(elapsedTime) * 半径;
+```
