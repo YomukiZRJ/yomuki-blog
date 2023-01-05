@@ -71,3 +71,11 @@
       - 使用[转换工具](http://gero3.github.io/facetype.js/)
       - 使用 three.js 中内置的`node_modules/three/examples/fonts`
       - 更改`curveSegments`和`bevelSegments`来优化性能
+
+## setAttribute 能 set 哪些
+
+- `uv2`
+  - 复制 uv 坐标，用于 aomap
+    ```js
+    floor.geometry.setAttribute("uv2", new THREE.BufferAttribute(floor.geometry.attributes.uv.array, 2));
+    ```

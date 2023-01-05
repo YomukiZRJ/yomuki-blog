@@ -17,4 +17,5 @@
   - [HDRI 转为立方体贴图](https://matheowis.github.io/HDRI-to-CubeMap/)
 - [textures](https://polyhaven.com/textures) 纹理贴图
 - [matcaps](https://github.com/nidorx/matcaps) MatCap 纹理库
+- [particle](https://www.kenney.nl/assets/particle-pack) 粒子贴图
 - [facetype](http://gero3.github.io/facetype.js/) 生成 facetype

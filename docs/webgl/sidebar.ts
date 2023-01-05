@@ -64,6 +64,10 @@ export default [
         text: "灯光",
         link: "/webgl/three/lights",
       },
+      {
+        text: "阴影",
+        link: "/webgl/three/shadows",
+      },
     ],
   },
 ];

@@ -39,3 +39,42 @@
     - MeshStandardMaterial 的扩展，提供了更高级的基于物理的渲染属性
     - 外层有个透明样的图层
 - [PointsMaterial](https://threejs.org/docs/index.html?q=Point#api/zh/materials/PointsMaterial)点材质
+
+## 使用 MeshStandardMaterial 还原一个物体
+
+- 添加金属度纹理
+  ```js
+  standardMaterial.metalnessMap = matalnessTexture;
+  ```
+- 添加粗糙度纹理
+  ```js
+  standardMaterial.roughnessMap = roughnessTexture;
+  ```
+- 添加颜色纹理
+  ```js
+  standardMaterial.map = colorTexture;
+  ```
+- 添加环境遮挡纹理(需要第二组 uv)
+
+  ```js
+  sphereMesh.geometry.setAttribute("uv2", new THREE.BufferAttribute(sphereMesh.geometry.attributes.uv.array, 2)); // 复制uv
+
+  standardMaterial.aoMap = ambientOcclusionTexture;
+  standardMaterial.aoMapIntensity = 1; // 强度
+  ```
+
+- 添加顶点位移纹理
+  ```js
+  standardMaterial.displacementMap = heightTexture; // 位移纹理。需要足够多的顶点
+  standardMaterial.displacementScale = 0.05;
+  ```
+- 添加法线贴图纹理(更改颜色照亮的方式，只改变光照)
+  ```js
+  standardMaterial.normalMap = normalTexture;
+  standardMaterial.normalScale.set(0.5, 0.5);
+  ```
+- 添加不透明度纹理
+  ```js
+  standardMaterial.transparent = true;
+  standardMaterial.alphaMap = alphaTexture;
+  ```
