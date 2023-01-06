@@ -60,3 +60,35 @@ more about 物理渲染：
 
 - [basic-theory-of-physically-based-rendering](https://marmoset.co/posts/basic-theory-of-physically-based-rendering/)
 - [physically-based-rendering-and-you-can-too](https://marmoset.co/posts/physically-based-rendering-and-you-can-too/)
+
+## 滤镜
+
+## mipmapping
+
+什么是 mipmapping？往 gpu 发送多张不同尺寸的纹理贴图，根据具体显示来决定用哪张
+
+### `minFilter` 缩小滤镜
+
+当纹理像素大于渲染像素时，贴图将如何采样
+
+- `THREE.LinearMipmapLinearFilter`它将使用 mipmapping 以及三次线性滤镜。默认值
+- `THREE.NearestFilter` 使用最接近的纹素的值。非常清晰的
+- `THREE.LinearFilter` 获取四个最接近的纹素，并在他们之间进行双线性插值
+- `THREE.NearestMipmapNearestFilter` 选择与被纹理化像素的尺寸最匹配的 mipmap， 并 NearestFilter（最靠近像素中心的纹理元素）为标准来生成纹理值。
+- `THREE.NearestMipmapLinearFilter` 选择与被纹理化像素的尺寸最接近的两个 mipmap， 并以 NearestFilter 为标准来从每个 mipmap 中生成纹理值。最终的纹理值是这两个值的加权平均值。
+- `THREE.LinearMipmapNearestFilter` 选择与被纹理化像素的尺寸最匹配的 mipmap， 并以 LinearFilter（最靠近像素中心的四个纹理元素的加权平均值）为标准来生成纹理值。
+- `THREE.LinearMipmapLinearFilter` 选择与被纹理化像素的尺寸最接近的两个 mipmap， 并以 LinearFilter 为标准来从每个 mipmap 中生成纹理值。最终的纹理值是这两个值的加权平均值。
+
+当不需要 mipmaps 的滤镜时，可以不要生成 mipmaps
+
+```js
+colorTexture.generateMipmaps = false;
+```
+
+### `magFilter` 放大滤镜
+
+当纹理像素小于渲染像素时，贴图将如何采样
+
+- `THREE.LinearFilter` 获取四个最接近的纹素，并在他们之间进行双线性插值。默认值
+- `THREE.NearestFilter` 使用最接近的纹素的值 。更清晰的，高性能
+  - 当为`gradientMap`时，采用这个值会让渲染时只渲染纹理里的颜色。

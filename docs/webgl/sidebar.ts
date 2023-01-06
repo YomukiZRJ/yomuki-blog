@@ -45,6 +45,10 @@ export default [
         link: "/webgl/three/basics-01",
       },
       {
+        text: "渲染器",
+        link: "/webgl/three/renderer",
+      },
+      {
         text: "object3d",
         link: "/webgl/three/object3d",
       },
@@ -67,6 +71,14 @@ export default [
       {
         text: "阴影",
         link: "/webgl/three/shadows",
+      },
+      {
+        text: "粒子",
+        link: "/webgl/three/particles",
+      },
+      {
+        text: "光线投射器",
+        link: "/webgl/three/raycaster",
       },
     ],
   },
