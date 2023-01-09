@@ -82,4 +82,13 @@ export default [
       },
     ],
   },
+  {
+    text: "物理引擎：cannon",
+    items: [
+      {
+        text: "开始",
+        link: "/webgl/cannon/01-start",
+      },
+    ],
+  },
 ];

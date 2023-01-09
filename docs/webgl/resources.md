@@ -19,3 +19,30 @@
 - [matcaps](https://github.com/nidorx/matcaps) MatCap 纹理库
 - [particle](https://www.kenney.nl/assets/particle-pack) 粒子贴图
 - [facetype](http://gero3.github.io/facetype.js/) 生成 facetype
+
+## 物理引擎
+
+### 3d 物理引擎
+
+- [Ammo.js](https://github.com/kripken/ammo.js/)
+  - [demo](http://schteppe.github.io/ammo.js-demos/)
+  - 没有文档
+  - 有点大，社区还在更新，c++写的物理引擎
+- [Cannon.js](https://schteppe.github.io/cannon.js/)
+  - 有 es &ts 版 `cannon-es`
+  - 比 ammo 轻量级，比 ammo 更容易实现
+  - 很多年没更新了，但是有维护的 fork
+- [Oimo.js](https://lo-th.github.io/Oimo.js/)
+  - 比 ammo 轻量级，比 ammo 更容易实现
+  - 两年前更新
+
+### 2d 物理引擎
+
+- [Matter.js](https://brm.io/matter-js/)
+  - 仍然更新
+- [P2.js](https://schteppe.github.io/p2.js/)
+  - 两年前更新
+- [Planck.js](https://piqnt.com/planck.js/)
+  - 仍然更新
+- [Box2D.js](http://kripken.github.io/box2d.js/demo/webgl/box2d.html)
+  - 仍然更新，没有文档
