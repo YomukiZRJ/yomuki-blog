@@ -46,12 +46,20 @@
   world.defaultContactMaterial = defaultContactMatertial;
   ```
 
-## 创建物理对象
+## 创建形状
 
 - 创建球体形状
   ```js
   const sphereShape = new CANNON.Sphere(0.5);
   ```
+- 创建盒子形状
+  - 盒子形状的参数和 three 中有所不同，它是从中心点发散的，所以要以 three 的参数\*0.5
+  ```js
+  new CANNON.Box(new CANNON.Vec3(width * 0.5, height * 0.5, depth * 0.5));
+  ```
+
+## 创建物理对象
+
 - 创建物理对象，并且将形状绑定为球体
   ```js
   const sphereBody = new CANNON.Body({
@@ -71,6 +79,7 @@
   floorBody.quaternion.setFromAxisAngle(new CANNON.Vec3(-1, 0, 0), Math.PI * 0.5);
   ```
 - 添加力量
+
   - `applyForce`
     - 在世界的某一点施加力量（而不是严格的施加在表面）
     - 如风、多米诺骨牌的小推力，愤怒的小鸟。
@@ -92,3 +101,44 @@
       ```
   - `applyLocalImpulse `
     - 和`applyImpulse`相同，但坐标是身体的局部坐标
+
+- 添加碰撞事件
+  ```js
+  boxBody.addEventListener("collide", () => {
+    playHitSound();
+  });
+  ```
+
+## 与 three 关联
+
+- 在帧动画里更新位置
+  ```js
+  // 物理位置
+  mesh.position.copy(body.position);
+  ```
+- 在帧动画里更新旋转
+  ```js
+  // 物理旋转（由碰撞产生的旋转）
+  mesh.quaternion.copy(body.quaternion);
+  ```
+
+## 不同的物体碰撞
+
+如果场景里有很多物体存在，则 cpu 会分别计算各个物体的碰撞，会有很大的性能消耗。
+
+- NaiveBroadphase
+  - 对每个 body 测试与其他 body 的碰撞
+- GridBroadphase
+  - 以网格范围来测试 body 碰撞，只测试同一网格或邻居网格
+- SAPBroadphase
+
+## 性能优化
+
+- 修改 Broadphase
+  ```js
+  world.broadphase = new CANNON.SAPBroadphase(world);
+  ```
+- 物体没动的时候，让它进入睡眠
+  ```js
+  world.allowSleep = true;
+  ```
