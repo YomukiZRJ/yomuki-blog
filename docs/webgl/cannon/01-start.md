@@ -108,6 +108,23 @@
     playHitSound();
   });
   ```
+  - 获取碰撞时的冲击速度
+    ```js
+    boxBody.addEventListener('collide', (collide) => {
+      /**
+       * 获得沿正常方向的冲击速度
+      */
+      const impactStrength: number = collide?.contact?.getImpactVelocityAlongNormal() as number || 0
+      // 可以根据不同的冲击力播放不同的碰撞声音
+      if (impactStrength > 1.5) playHitSound()
+    })
+    ```
+- 移除对象
+  ```js
+  // 记得把事件监听先移除了
+  body.removeEventListener("collide", handleCollide);
+  world.removeBody(body);
+  ```
 
 ## 与 three 关联
 
@@ -132,7 +149,22 @@
   - 以网格范围来测试 body 碰撞，只测试同一网格或邻居网格
 - SAPBroadphase
 
+## 物体间的约束
+
+两个物体间的约束
+
+- HingeConstraint
+  - 铰链约束。把它想象成门铰链。
+- DistanceConstraint
+  - 强迫两个 body 之间保持距离
+- LockConstraint
+  - 约束链。合并 body，就像他们是一块的，消除 body 之间的自由度。
+- PointToPointConstraint
+  - 以给定的点连接两个 body
+
 ## 性能优化
+
+物理计算均来自于 cpu
 
 - 修改 Broadphase
   ```js
@@ -142,3 +174,5 @@
   ```js
   world.allowSleep = true;
   ```
+- 增加 workers（多线程，将物理计算放在 cpu 的其他线程中）
+  - [例子](https://schteppe.github.io/cannon.js/examples/worker.html)

@@ -28,6 +28,9 @@
   - [demo](http://schteppe.github.io/ammo.js-demos/)
   - 没有文档
   - 有点大，社区还在更新，c++写的物理引擎
+  - 最受欢迎
+  - 有点难学
+  - 功能多
 - [Cannon.js](https://schteppe.github.io/cannon.js/)
   - 有 es &ts 版 `cannon-es`
   - 比 ammo 轻量级，比 ammo 更容易实现
@@ -35,6 +38,8 @@
 - [Oimo.js](https://lo-th.github.io/Oimo.js/)
   - 比 ammo 轻量级，比 ammo 更容易实现
   - 两年前更新
+- Physijs
+  - threejs 的物理引擎
 
 ### 2d 物理引擎
 
