@@ -9,6 +9,7 @@
 ## three 相关
 
 - [仓库](https://github.com/mrdoob/three.js)
+- [threejs 在线编辑器](https://threejs.org/editor/)
 - [three.js 教程](http://www.webgl3d.cn/Three.js/)
 
 ## 贴图资源
@@ -51,3 +52,7 @@
   - 仍然更新
 - [Box2D.js](http://kripken.github.io/box2d.js/demo/webgl/box2d.html)
   - 仍然更新，没有文档
+
+## 模型
+
+- [gltf 测试模型库](https://github.com/KhronosGroup/glTF-Sample-Models)
