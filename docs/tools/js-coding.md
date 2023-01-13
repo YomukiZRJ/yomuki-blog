@@ -59,6 +59,7 @@
 ## Canvas & SVG
 
 - [Fabric.js](http://fabricjs.com/) Javascript HTML5 canvas 工具库。
+- [konvajs](https://konvajs.org/) HTML5 2d canvas js library for desktop and mobile applications
 
 ## 元素动画
 

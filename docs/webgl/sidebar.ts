@@ -80,6 +80,10 @@ export default [
         text: "光线投射器",
         link: "/webgl/three/raycaster",
       },
+      {
+        text: "模型导入&glft",
+        link: "/webgl/three/models-gltf",
+      },
     ],
   },
   {
