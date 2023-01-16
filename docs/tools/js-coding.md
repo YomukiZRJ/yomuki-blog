@@ -42,6 +42,7 @@
 
 - [hammerjs](http://hammerjs.github.io/getting-started/) 手势事件插件、体积小
   - 识别由触摸、鼠标和指针事件做出的手势。
+- [auto-animate](https://auto-animate.formkit.com) 一行代码添加动画
 
 ### 滚动
 

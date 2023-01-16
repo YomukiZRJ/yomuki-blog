@@ -8,6 +8,10 @@
 - [jsdoc](https://jsdoc.zcopy.site/) 根据 javascript 文件中注释信息生成 API 文档
 - [storybook](https://storybook.js.org/) 组件库开发、测试和文档
 
+## 演示文稿
+
+- [Slidev](https://cn.sli.dev/)
+
 ## 低代码开发平台
 
 - [GoView](https://gitee.com/MTrun/go-view) 拖拽式低代码数据可视化开发平台

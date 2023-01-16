@@ -12,6 +12,7 @@
 - [Bootstrap Icons](https://github.com/twbs/icons) 开源
 - [icongo](https://icongo.github.io/) 开源 icon 搜索
 - [lordicon](https://lordicon.com/) 动态 icon
+- [iconbolt](https://www.iconbolt.com/)
 
 ## 色彩
 
