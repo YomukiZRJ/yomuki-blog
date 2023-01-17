@@ -12,5 +12,12 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true
-  }
+  },
+  "include": [
+    "docs/**/*.ts",
+    "docs/**/*.d.ts",
+    "docs/.vitepress/**/*.vue",
+    "docs/.vitepress/**/*.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
