@@ -2,6 +2,7 @@
 
 ## 学习资源
 
+- [learnopengl](https://learnopengl.com/Getting-started/Coordinate-Systems)
 - [一文入门游戏开发语言之 webgl 中的 glsl 语言](https://juejin.cn/post/7085587372565332004)
 - [WebGL 教程](https://blog.csdn.net/u014291990/article/details/102980860)
 - [通俗易懂](https://blog.csdn.net/weixin_44867717/category_11251206_3.html)
@@ -56,3 +57,12 @@
 ## 模型
 
 - [gltf 测试模型库](https://github.com/KhronosGroup/glTF-Sample-Models)
+
+## glsl
+
+- [vite-plugin-glsl](https://www.npmjs.com/package/vite-plugin-glsl)
+- [vite-plugin-glslify](https://www.npmjs.com/package/vite-plugin-glslify)
+- [shaderific](https://shaderific.com/glsl.html) 着色器文档
+- [learnopengl](https://learnopengl.com/Getting-started/Coordinate-Systems)
+- [thebookofshaders](https://thebookofshaders.com/)
+- [shadertoy](https://www.shadertoy.com/) 着色器素材
