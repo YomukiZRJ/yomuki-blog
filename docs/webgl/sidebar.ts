@@ -87,6 +87,10 @@ export default [
       {
         text: '真实渲染',
         link: '/webgl/three/realistic-render'
+      },
+      {
+        text: '着色器',
+        link: '/webgl/three/shaders'
       }
     ]
   },

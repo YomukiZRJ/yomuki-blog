@@ -3,14 +3,6 @@
 - [一文入门游戏开发语言之 webgl 中的 glsl 语言](https://juejin.cn/post/7085587372565332004)
 - [WebGL 教程](https://blog.csdn.net/u014291990/article/details/102980860)
 
-## 基本类型
-
-- float
-- int
-- void
-- bool
-- invariant
-
 ## 变量修饰符
 
 用来接收 JavaScript 传递过来的信息。
@@ -21,26 +13,16 @@
   - 通常用于存储变换矩阵等不常变化的数据
 - `varing `变量：它用来从顶点着色器中往片元着色器传递数据。使用它我们可以在顶点着色器中声明一个变量并对其赋值，经过插值处理后，在片元着色器中取出插值后的值来使用。
 
-## 数据类型
-
-### n 维向量类型
-
-- `vec2`、`vec3`、`vec4` 二、三、四维向量，具有 xyzw 两个分量，分量是浮点数
-- `ivec2`、`ivec3`、`ivec4` 分量是整型数
-- `bvec2`、`bvec3`、`bvec4` 分量是布尔值 bool
-
-```
-    vec3 foo = vec3(1.0,2.0,1.0);
-    vec2 bar = foo.xz;
-```
-
 ## 运算精度
 
 在不太影响渲染效果前提下，可以尽量降低运算精度。
 
 - `lowp` 低精度
+  - 不够精确
 - `mediump` 中精度
+  - 常用的
 - `highp` 高精度
+  - 高性能消耗，可能无法在某些设备上运行
 
 声明单个变量精度
 
@@ -62,6 +44,45 @@ precision mediump float;
 | float | hight | 无默认值，如果片元着色器用到浮点数，一定要手动设置 |
 | sampler2D | lowp | lowp |
 | samplerCube | lowp | lowp |
+
+## 数据类型
+
+- float
+- int
+- void
+- bool
+- invariant
+
+### 向量（Vector）类型
+
+- `vec2`、`vec3`、`vec4` 二、三、四维向量，具有 xyzw 两个分量，分量是`浮点数`
+- `ivec2`、`ivec3`、`ivec4` 分量是`整型`数
+- `bvec2`、`bvec3`、`bvec4` 分量是`布尔值` bool
+
+```c#
+vec3 foo = vec3(1.0,2.0,1.0);
+vec2 bar = foo.xz;
+```
+
+### 矩阵（Matrix）类型
+
+### 纹理（Texture）类型
+
+- `sampler2D` 提供对 2D 纹理的访问
+
+```c#
+uniform sampler2D texture;
+```
+
+- `samplerCube` 提供对立方体地图纹理的访问
+
+## 内置函数
+
+### 纹理
+
+- `texture2D`
+  - 第一个参数是 `sampler2D`
+  - 第二个参数是 uv 坐标
 
 ## 内置变量
 
