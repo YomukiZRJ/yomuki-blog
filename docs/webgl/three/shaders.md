@@ -264,3 +264,76 @@ void main()
     gl_FragColor=textureColor;
 }
 ```
+
+## uv 坐标
+
+是一个只有正轴且最大值为 1 的平面坐标系。
+
+```c#
+float strength = vUv.y ;
+gl_FragColor = vec4(vec3(strength), 1.0);
+```
+
+```c#
+float strength = 1.0 - vUv.y;
+gl_FragColor = vec4(vec3(strength), 1.0);
+```
+
+```c#
+float strength = vUv.y * 10.0;
+gl_FragColor = vec4(vec3(strength), 1.0);
+```
+
+```c#
+float strength = mod(vUv.y * 10.0,1.0);
+gl_FragColor = vec4(vec3(strength), 1.0);
+```
+
+```c#
+float strength = mod(vUv.y * 10.0,1.0);
+strength = step(0.5,strength);
+```
+
+```c#
+float strength = step(0.9,mod(vUv.x * 10.0,1.0));
+strength += step(0.9,mod(vUv.y * 10.0,1.0));
+```
+
+```c#
+float strength = step(0.9,mod(vUv.x * 10.0,1.0));
+strength *= step(0.9,mod(vUv.y * 10.0,1.0));
+```
+
+```c#
+float strength = step(0.2,mod(vUv.x * 10.0,1.0));
+strength *= step(0.8,mod(vUv.y * 10.0,1.0));
+```
+
+```c#
+float barX = step(0.4,mod(vUv.x * 10.0,1.0)) * step(0.8,mod(vUv.y * 10.0,1.0));
+float barY = step(0.4,mod(vUv.y * 10.0,1.0)) * step(0.8,mod(vUv.x * 10.0,1.0));
+float strength = barX + barY;
+```
+
+```c#
+float barX = step(0.4,mod(vUv.x * 10.0,1.0)) * step(0.8,mod(vUv.y * 10.0 + 0.2,1.0));
+float barY = step(0.4,mod(vUv.y * 10.0,1.0)) * step(0.8,mod(vUv.x * 10.0 + 0.2,1.0));
+float strength = barX + barY;
+```
+
+```c#
+float strength = abs(vUv.x - 0.5);
+```
+
+```c#
+float strength = min(abs(vUv.x - 0.5),abs(vUv.y - 0.5));
+```
+
+```c#
+float strength = floor(vUv.x * 10.0)/10.0;
+```
+
+```c#
+float strength = floor(vUv.x * 10.0)/10.0;
+strength *= floor(vUv.y * 10.0)/10.0;
+```

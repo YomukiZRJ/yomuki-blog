@@ -13,12 +13,21 @@ export default [
     ]
   },
   {
-    text: 'WebGL笔记',
+    text: 'GLSL笔记',
     items: [
       {
-        text: 'GLSL基础',
-        link: '/webgl/basics/GLSL-01'
+        text: '数据类型、精度',
+        link: '/webgl/glsl/01'
       },
+      {
+        text: '内置函数',
+        link: '/webgl/glsl/functions'
+      }
+    ]
+  },
+  {
+    text: 'WebGL笔记',
+    items: [
       {
         text: '基础01：一个点 & 往着色器传递数据',
         link: '/webgl/basics/basics-01'
