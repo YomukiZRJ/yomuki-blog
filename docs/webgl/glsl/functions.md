@@ -53,6 +53,19 @@ vec4 clamp(vec4 x, vec4 minVal, vec4 maxVal)
 
 大于 minVal，小于 maxVal，则返回 x。如果 x 小于 minVal，则返回 minVal。如果 x 大于 maxVal，则返回 maxVal。
 
+## power
+
+### pow
+
+```c#
+float pow(float x, float y)
+vec2 pow(vec2 x, vec2 y)
+vec3 pow(vec3 x, vec3 y)
+vec4 pow(vec4 x, vec4 y)
+```
+
+幂函数返回 x 的幂。
+
 ## 几何
 
 ### length
