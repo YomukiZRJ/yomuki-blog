@@ -78,3 +78,45 @@
   standardMaterial.transparent = true;
   standardMaterial.alphaMap = alphaTexture;
   ```
+
+## 通过钩子修改材质
+
+[`Material.onBeforeCompile`](https://threejs.org/docs/index.html?q=Mater#api/en/materials/Material.onBeforeCompile)在编译着色器程序之前立即执行的可选回调。使用着色器源代码作为参数调用此函数。
+
+材质的着色器一般位于`node_modules/three/src/renderers/shaders`中。
+
+### 修改顶点
+
+将顶点着色器中的`#include <begin_vertex>`替换掉。`#include <begin_vertex>`原来的代码：
+
+```c#
+export default /* glsl */`
+vec3 transformed = vec3( position );
+`;
+```
+
+### 添加静态 uniforms
+
+```js
+material.onBeforeCompile = shader => {
+  shader.uniforms.uXXXX = {
+    value: 0,
+  };
+  shader.vertexShader = shader.vertexShader.replace(
+    "#include <common>",
+    `
+      #include <common>
+      float uTime;
+      `
+  );
+};
+```
+
+### 添加动态 uniforms
+
+```js
+// 塞点需要变的uniforms进去
+material.defines = {
+  uTime: 0,
+};
+```

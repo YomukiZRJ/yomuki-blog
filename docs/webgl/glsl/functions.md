@@ -53,6 +53,28 @@ vec4 clamp(vec4 x, vec4 minVal, vec4 maxVal)
 
 大于 minVal，小于 maxVal，则返回 x。如果 x 小于 minVal，则返回 minVal。如果 x 大于 maxVal，则返回 maxVal。
 
+## 三角函数
+
+### cos
+
+### sin
+
+### atan
+
+```c#
+float atan(float y_over_x)
+vec2 atan(vec2 y_over_x)
+vec3 atan(vec3 y_over_x)
+vec4 atan(vec4 y_over_x)
+
+float atan(float y, float x)
+vec2 atan(vec2 y, vec2 x)
+vec3 atan(vec3 y, vec3 x)
+vec4 atan(vec4 y, vec4 x)
+```
+
+返回 y，x 的夹角。
+
 ## power
 
 ### pow
