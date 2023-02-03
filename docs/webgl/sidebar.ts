@@ -100,6 +100,10 @@ export default [
       {
         text: '着色器',
         link: '/webgl/three/shaders'
+      },
+      {
+        text: '后期处理',
+        link: '/webgl/three/post-processing'
       }
     ]
   },

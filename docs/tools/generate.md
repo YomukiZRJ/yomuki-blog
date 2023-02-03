@@ -24,6 +24,8 @@
 ## 图片生成
 
 - [favicon 生成](https://favicon.io/)
+- [vhs](https://github.com/charmbracelet/vhs)，编写终端 gif 作为集成测试和演示 cli 工具的代码。
+  - [Scifi Terminals](https://github.com/ldodds/scifi-terminals) 可以模拟科幻电影的命令行操作效果
 
 ## 动画
 

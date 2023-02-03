@@ -99,7 +99,7 @@ vec3 transformed = vec3( position );
 
 ```js
 material.onBeforeCompile = shader => {
-  shader.uniforms.uXXXX = {
+  shader.uniforms.uTime = {
     value: 0,
   };
   shader.vertexShader = shader.vertexShader.replace(
@@ -114,9 +114,65 @@ material.onBeforeCompile = shader => {
 
 ### 添加动态 uniforms
 
+可用`defines`实现，但是，好掉帧 QAQ
+
 ```js
 // 塞点需要变的uniforms进去
 material.defines = {
   uTime: 0,
+};
+```
+
+### 修复阴影
+
+创建一个深度网格材质来作为自定义深度材质，同时将这个材质的着色器修改为和之前的材质相同。
+
+```js
+const depthMaterial = new THREE.MeshDepthMaterial({
+  depthPacking: THREE.RGBADepthPacking,
+});
+// 修复阴影
+depthMaterial.onBeforeCompile = shader => {
+  setCustomShader(shader);
+  // 改变顶点
+  shader.vertexShader = shader.vertexShader.replace(
+    "#include <begin_vertex>",
+    `
+          #include <begin_vertex>
+          float angle = (position.y + uTime) * 0.9; // 根据y坐标和时间，有着不同的旋转角度
+          mat2 rotateMatrix = getRotate2dMatrix(angle);
+          transformed.zx = transformed.zx * rotateMatrix; // 如果是xz的话就是顺时针转
+          `
+  );
+};
+
+mesh.customDepthMaterial = depthMaterial; // 使用自定义深度材质 用来修复阴影
+```
+
+### 修复法线（自身阴影面）
+
+替换`#include <beginnormal_vertex>`，修改法向量坐标`objectNormal`和顶点的相同。
+
+```js
+material.onBeforeCompile = shader => {
+  setCustomShader(shader);
+  // 修复法线
+  shader.vertexShader = shader.vertexShader.replace(
+    "#include <beginnormal_vertex>",
+    `
+      #include <beginnormal_vertex>
+      float angle =  (position.y + uTime) * 0.9; // 根据y坐标和时间，有着不同的旋转角度
+      mat2 rotateMatrix = getRotate2dMatrix(angle);
+      objectNormal.zx = objectNormal.zx * rotateMatrix; // 如果是xz的话就是顺时针转
+      `
+  );
+  // 改变顶点
+  shader.vertexShader = shader.vertexShader.replace(
+    "#include <begin_vertex>",
+    `
+          #include <begin_vertex>
+          transformed.zx = transformed.zx * rotateMatrix; // 如果是xz的话就是顺时针转
+          `
+  );
 };
 ```
