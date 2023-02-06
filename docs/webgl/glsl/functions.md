@@ -112,6 +112,17 @@ float distance(vec4 p0, vec4 p1)
 
 距离函数返回两点之间的距离。两点的距离是向量 d = p0-p1 的长度，从 p1 开始，指向 p0。
 
+### dot
+
+```c#
+float dot(float x, float y)
+float dot(vec2 x, vec2 y)
+float dot(vec3 x, vec3 y)
+float dot(vec4 x, vec4 y)
+```
+
+点函数返回两个输入参数的点积，即组件式积的和。如果 x 和 y 相同，点乘的平方根等于向量的长度。输入参数可以是浮动标量或浮动向量。对于浮动标量，点函数是平凡的，它返回 x 和 y 的乘积。
+
 ## 纹理
 
 - `texture2D`

@@ -66,3 +66,7 @@
 - [learnopengl](https://learnopengl.com/Getting-started/Coordinate-Systems)
 - [thebookofshaders](https://thebookofshaders.com/)
 - [shadertoy](https://www.shadertoy.com/) 着色器素材
+
+## 其他相关插件
+
+- [stats.js](https://github.com/mrdoob/stats.js/) 性能监听

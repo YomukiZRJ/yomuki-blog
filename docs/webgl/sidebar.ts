@@ -104,6 +104,10 @@ export default [
       {
         text: '后期处理',
         link: '/webgl/three/post-processing'
+      },
+      {
+        text: '性能注意点',
+        link: '/webgl/three/performance-tips'
       }
     ]
   },
