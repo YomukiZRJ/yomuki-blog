@@ -21,6 +21,7 @@
 - [matcaps](https://github.com/nidorx/matcaps) MatCap 纹理库
 - [particle](https://www.kenney.nl/assets/particle-pack) 粒子贴图
 - [facetype](http://gero3.github.io/facetype.js/) 生成 facetype
+- [创建.basis 文件](https://github.com/BinomialLLC/basis_universal) 压缩功能更强，GPU 更容易读取该格式
 
 ## 物理引擎
 

@@ -106,4 +106,97 @@ renderer.shadowMap.needsUpdate = true;
 
 ## 纹理贴图
 
+[Texture](https://threejs.org/docs/index.html?q=Texture#api/zh/textures/Texture)
+
 ### 调整尺寸
+
+此处的尺寸不是指贴图文件的大小，而是分辨率。尽可能的降低纹理图片的分辨率。
+
+纹理的每个像素都会被存储在 GPU 上，不能一下子传送过于庞大数量的尺寸过大的纹理给 GPU，需要尽可能的缩小纹理的尺寸。
+
+### 保持分辨率为 2 的幂次方
+
+如果不这样做，渲染时候进行 **mipmap** 时 Three.js 会尝试通过将图像调整到最接近 2 的幂次方的分辨率来修复此问题，但此过程将占用资源，并可能导致质量较差的纹理贴图效果。
+
+### 降低纹理文件大小
+
+虽然文件大小并不会影响 GPU 的内存使用情况，但是可以有效的减少加载时间。
+
+可以使用 TinyPNG 等在线工具来进一步减轻文件大小。
+
+可以尝试特殊的格式 [`.basis`](https://github.com/BinomialLLC/basis_universal) ，它是一种类似.jpg 和.png 的格式，但压缩功能更强，GPU 更容易读取该格式。
+
+### mipmap
+
+当`Texture.minFilter`（缩小滤镜）选择没有使用**mipmap**的滤镜时，可以关闭**mipmap**的生成：
+
+```js
+texture.generateMipmaps = false;
+```
+
+## 几何体 Geometries
+
+### 不要去更新顶点
+
+更新几何体的顶点会影响性能。创建几何图形时可以执行一次，但避免在动画函数中执行。
+如果需要为顶点设置动画，请使用**顶点着色器**。
+
+以下是错误示范：
+
+```js
+const animation2 = () => {
+  const elapsedTime = clock.getElapsedTime();
+  for (let index = 0; index < count; index++) {
+    const i3 = index * 3;
+    const x = particlesGeometry.attributes.position.array[i3];
+    particlesGeometry.attributes.position.array[i3 + 1] = Math.sin(elapsedTime + x);
+  }
+  particlesGeometry.attributes.position.needsUpdate = true;
+};
+```
+
+### 几何体同质化
+
+如果多个网格使用了相同的几何体，那么，只需要创建一个就够了。
+
+### 合并几何体
+
+如果几何体不需要进行移动等操作，可以使用[`BufferGeometryUtils`](https://threejs.org/docs/index.html?q=BufferGeometryUtils#examples/zh/utils/BufferGeometryUtils)合并。
+
+```js
+const geometries = [];
+for (let i = 0; i < 50; i++) {
+  const geometry = new THREE.BoxBufferGeometry(0.5, 0.5, 0.5);
+
+  geometry.rotateX((Math.random() - 0.5) * Math.PI * 2);
+  geometry.rotateY((Math.random() - 0.5) * Math.PI * 2);
+
+  geometry.translate((Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10);
+
+  geometries.push(geometry);
+}
+
+const mergedGeometry = BufferGeometryUtils.mergeBufferGeometries(geometries);
+console.log(mergedGeometry);
+
+const material = new THREE.MeshNormalMaterial();
+
+const mesh = new THREE.Mesh(mergedGeometry, material);
+scene.add(mesh);
+```
+
+这样，就只有一次 Draw-call
+
+## 材质 Materials
+
+### 材质同质化
+
+如果有多个网格使用相同的材质，那就只创建一次。
+
+### 使用廉价的材质
+
+## 网格 Mesh
+
+### 实例化网格 InstancedMesh
+
+需要独立控制各个网格而无法合并几何体，但它们却使用相同的几何体和材质，这时候可以使用[`InstancedMesh`](https://threejs.org/docs/index.html?q=InstancedMesh#api/zh/objects/InstancedMesh)。
