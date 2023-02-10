@@ -200,3 +200,77 @@ scene.add(mesh);
 ### 实例化网格 InstancedMesh
 
 需要独立控制各个网格而无法合并几何体，但它们却使用相同的几何体和材质，这时候可以使用[`InstancedMesh`](https://threejs.org/docs/index.html?q=InstancedMesh#api/zh/objects/InstancedMesh)。
+
+## 模型 Models
+
+### 低多边形
+
+使用低多边形模型，多边形越少，帧率越好。
+
+可以使用法线贴图添加更多细节。
+
+### 压缩文件
+
+- **Draco 压缩**
+  - 如果模型比较复杂，可以使用 Draco 压缩。
+  - 优点：大大减少文件体积
+  - 缺点：解压几何体时页面可能会卡住，同时需要载入 Draco 库
+- **Gzip**
+  - 在服务器端进行压缩。
+
+## 相机 Cameras
+
+### 减少渲染对象
+
+- **视野范围**
+  - 缩小相机的视野，减少屏幕中渲染的对象。
+- **近端面和远端面**
+  - 减少相机的`near`近端面属性和`far`远端面属性。
+  - 比如有一个非常广阔的世界，有山有水，那我们可能会看不到远在山后的小房子，将`far`值降到合适的值，让这些房子甚至不会被渲染。
+
+## 渲染器 Renderer
+
+- **限制像素比**
+  - 在一些高像素比的设备上，渲染的像素会更多，性能消耗也更大。
+  - 将像素比限制在 2
+  - `renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))`
+- **合理的使用抗齿距**
+- **设置功率偏好**
+
+  - 一些设备可能会使用不同的 GPU，可以通过`powerPreference`来提示用户怎样的配置更适用于当前的 WebGL 环境。
+
+  ```js
+  const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    powerPreference: "high-performance",
+  });
+  ```
+
+  - 如果没有性能问题，则将此属性设置为`default`
+
+## 后期处理 Postprocessing
+
+- **减少通道数量**
+  - 每个后期处理过程都将使用与渲染器分辨率（包括像素比率）相同的像素进行渲染。
+  - 如果分辨率为 1920x1080，有 4 个通道，像素比为 2，则需要渲染 19202108024=33177600 像素。
+  - 可以的话将其整合为一个通道。
+
+## 着色器 Shaders
+
+- **指定精度**
+  - `ShaderMaterial.precision`
+- **使用纹理贴图代替噪波**
+- **使用 defines**
+  - 不会变的 uniforms 可以用 defines 带图
+  ```c#
+  #define uDisplacementStrength 1.5
+  ```
+  ```js
+  const shaderMaterial = new THREE.ShaderMaterial({
+      defines:
+      {
+          uDisplacementStrength: 1.5
+      },
+  }
+  ```
+- **在顶点着色器中计算，然后发送到片元着色器**

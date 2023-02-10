@@ -1,5 +1,7 @@
 # js in node 库
 
+- [go-get-folder-size](https://github.com/markthree/go-get-folder-size) 通过递归迭。代所有子文件(文件 & 文件夹)来获取文件夹的大小。使用 go，速度更快
+
 ## pdf
 
 - [html-pdf](https://www.npmjs.com/package/html-pdf) html 变 pdf **node**
