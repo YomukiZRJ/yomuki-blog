@@ -6,6 +6,7 @@
 
 ## icon
 
+- [**iconify**](https://iconify.design/) 流行的图标集，带组件，有 vscode 引入插件
 - [iconpark](https://github.com/bytedance/iconpark) 字节跳动的开源 icon 库，可以自选配色
 - [FortAwesome](https://github.com/FortAwesome/Font-Awesome) 提供了可缩放的矢量图标，可以使用 CSS 所提供的所有特性对它们进行更改，包括：大小、颜色、阴影或者其它任何支持的效果。
 - [ionicons](https://github.com/ionic-team/ionicons) 开源

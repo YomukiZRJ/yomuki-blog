@@ -8,6 +8,7 @@
 - [渐变生成](https://www.jiangweishan.com/tool/gradientEditor/) 线性渐变
 - [渐变色获取](https://webkul.github.io/coolhue/)
 - [loading.io](https://loading.io/) loading 定制，可导出图片或 css，有点卡 ，可能需要科学
+- [handsome-css](https://www.handsome-css.com/) 各种 CSS 特效和组件
 
 ### 布局
 

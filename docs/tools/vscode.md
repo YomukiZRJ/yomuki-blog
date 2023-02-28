@@ -1,5 +1,9 @@
 # vscode 插件
 
+## 字体
+
+- [Input](https://input.djr.com/)
+
 ## any-rule - 正则大全
 
 ## [Turbo Console Log](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log) - 一键生成 console 语句
