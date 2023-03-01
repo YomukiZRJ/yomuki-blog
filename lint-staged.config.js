@@ -4,5 +4,5 @@ module.exports = {
   'package.json': ['eslint --fix'],
   '*.vue': ['eslint --fix'],
   '*.{scss,less,styl,html}': ['prettier --write'],
-  '*.md': ['prettier --write']
+  '*.md': ['prettier --write', 'eslint --fix']
 }
