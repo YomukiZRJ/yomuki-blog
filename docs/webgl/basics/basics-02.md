@@ -39,19 +39,19 @@
 
 ## 缓冲区 & 写入数据 & 如何读取数据
 
-<image-box src="http://assets.yomuki.com/md/webgl/%E7%BC%93%E5%86%B2%E5%8C%BA%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png" />
+<image-box src="webgl/%E7%BC%93%E5%86%B2%E5%8C%BA%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png" />
 
 ```js
 // 三角形三个顶点
-const positions: [number] = [1, 0, 0, 1, 0, 0];
+const positions: [number] = [1, 0, 0, 1, 0, 0]
 // 创建缓冲区
-const buffer: WebGLBuffer = gl.createBuffer();
+const buffer: WebGLBuffer = gl.createBuffer()
 // 将刚刚创建的缓冲区绑定为当前顶点属性缓冲区
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
 // 激活属性
-gl.enableVertexAttribArray(aPosition);
+gl.enableVertexAttribArray(aPosition)
 // 往当前缓冲区写入数据
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW)
 ```
 
 - `gl.createBuffer` 创建缓冲区 `WebGLBuffer`
@@ -74,20 +74,20 @@ gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 /**
  * 将属性绑定到当前缓冲区，并设置如何读取
  */
-function readBuffer() {
+function readBuffer () {
   // 每次读取两个数据
-  const size = 2;
+  const size = 2
   // 每个数据的类型是32位浮点型
-  const type = gl.FLOAT;
+  const type = gl.FLOAT
   // 不需要归一化数据
-  const normalize = false;
+  const normalize = false
   // 每次迭代运行需要移动数据数 * 每个数据所占内存 到下一个数据开始点
-  const stride = 0;
+  const stride = 0
   // 从缓冲起始位置开始读取
-  const offset = 0;
+  const offset = 0
   // 将 aPosition 变量获取数据的 缓冲区 指向当前绑定的 WebGLBuffer
   // 将属性绑定到了当前的缓冲区
-  gl.vertexAttribPointer(aPosition, size, type, normalize, stride, offset);
+  gl.vertexAttribPointer(aPosition, size, type, normalize, stride, offset)
 }
 ```
 
@@ -112,13 +112,13 @@ function readBuffer() {
 /**
  * 绘制三角形
  */
-function drawTriangle() {
+function drawTriangle () {
   // 从顶点数组的开始位置取顶点数据
-  const offset = 0;
+  const offset = 0
   // 要绘制三个点，所以执行三次顶点绘制操作。
-  const count = 3;
+  const count = 3
   // 绘制三角形
-  gl.drawArrays(gl.TRIANGLES, offset, count);
+  gl.drawArrays(gl.TRIANGLES, offset, count)
 }
 ```
 
@@ -127,30 +127,30 @@ function drawTriangle() {
 [源码](https://github.com/YomukiZRJ/study-webgl/tree/main/src/04%E5%8A%A8%E6%80%81%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2)
 
 ```js
-canvas.addEventListener("click", (e: MouseEvent) => {
-  const { pageX, pageY } = e;
-  positions.push(pageX, pageY);
+canvas.addEventListener('click', (e: MouseEvent) => {
+  const { pageX, pageY } = e
+  positions.push(pageX, pageY)
   // 每有三个点
-  if (positions.length % 6 === 0) {
-    console.log(positions);
+  if (positions.length % 6 === 0){
+    console.log(positions)
     // 向缓冲区中复制新的顶点数据。
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.DYNAMIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.DYNAMIC_DRAW)
     // 设置三角形颜色
-    setColor();
+    setColor()
     // 重新渲染
-    render();
+    render()
   }
-});
+})
 /**
  * 设置片元着色
  */
-function setColor() {
-  const color = randomColor();
-  gl.uniform4f(uColor, color.r, color.g, color.b, color.a);
+function setColor () {
+  const color = randomColor()
+  gl.uniform4f(uColor, color.r, color.g, color.b, color.a)
 }
-function render() {
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  gl.drawArrays(gl.TRIANGLES, 0, positions.length / 2);
+function render () {
+  gl.clear(gl.COLOR_BUFFER_BIT)
+  gl.drawArrays(gl.TRIANGLES, 0, positions.length / 2)
 }
 ```
 
@@ -174,22 +174,22 @@ v_Color = a_Color
 创建颜色缓冲区
 
 ```js
-const colors: [number] = [];
-const colorBuffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-gl.enableVertexAttribArray(aColor);
-gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, 0, 0);
+const colors: [number] = []
+const colorBuffer = gl.createBuffer()
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer)
+gl.enableVertexAttribArray(aColor)
+gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, 0, 0)
 ```
 
 在往缓存区写入数据前，切换缓存区
 
 ```js
 // 切换至顶点坐标缓存区
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.DYNAMIC_DRAW);
+gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.DYNAMIC_DRAW)
 // 切换至顶点颜色缓存区
-gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW);
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer)
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW)
 ```
 
 ## tips
@@ -197,11 +197,11 @@ gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW);
 在使用多个缓存区时，在往不同缓存区绑定属性，写入数据前，都需要将对应的缓存区绑定至当前缓存区`bindBuffer`。
 
 ```js
-gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW);
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer)
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW)
 
-gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, 0, 0);
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer)
+gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, 0, 0)
 ```
 
 ## 使用单个 buffer 读取多种顶点数据
@@ -211,9 +211,9 @@ gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, 0, 0);
 顶点坐标和颜色存在一起：
 
 ```js
-const { pageX, pageY } = e;
-const color = randomColor();
-positions.push(pageX, pageY, color.a, color.g, color.b, color.a);
+const { pageX, pageY } = e
+const color = randomColor()
+positions.push(pageX, pageY, color.a, color.g, color.b, color.a)
 ```
 
 positions 中的数据就是：x,y,r,g,b,a,x,y,r,g,b,a,x,y,r,g,b,a。
@@ -224,10 +224,10 @@ positions 中的数据就是：x,y,r,g,b,a,x,y,r,g,b,a,x,y,r,g,b,a。
 
 ```js
 // 代表一个顶点信息所占用的字节数
-const stride = 4 * 6; // 6个元素 每个元素占4字节
+const stride = 4 * 6 // 6个元素 每个元素占4字节
 // 设置顶点坐标读取
-gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, stride, 0);
+gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, stride, 0)
 // 设置颜色读取
-const colorOffset = 4 * 2; // 读取颜色元素的时偏移量，顶点坐标占用2个元素，每个元素4字节
-gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, stride, colorOffset);
+const colorOffset = 4 * 2 // 读取颜色元素的时偏移量，顶点坐标占用2个元素，每个元素4字节
+gl.vertexAttribPointer(aColor, 4, gl.FLOAT, false, stride, colorOffset)
 ```

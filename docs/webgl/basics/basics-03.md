@@ -21,38 +21,38 @@ const positions = [
   255,
   0,
   0,
-  1, //V0
+  1, // V0
   30,
   300,
   255,
   0,
   0,
-  1, //V1
+  1, // V1
   300,
   300,
   255,
   0,
   0,
-  1, //V2
+  1, // V2
   30,
   30,
   0,
   255,
   0,
-  1, //V0
+  1, // V0
   300,
   300,
   0,
   255,
   0,
-  1, //V2
+  1, // V2
   300,
   30,
   0,
   255,
   0,
-  1, //V3
-];
+  1 // V3
+]
 ```
 
 然后利用一个 buffer 读取多种数据绘制两个三角形
@@ -69,7 +69,7 @@ const positions = [
 - offset 偏移量
 
 ```js
-gl.drawElements(gl.TRIANGLES, 3, gl.UNSIGNED_BYTE, 0);
+gl.drawElements(gl.TRIANGLES, 3, gl.UNSIGNED_BYTE, 0)
 ```
 
 表示：采用三角形绘制，共绘制 3 个顶点，顶点索引类型是无符号 8 位整数值，从顶点索引数组的开始位置绘制。
@@ -77,63 +77,63 @@ gl.drawElements(gl.TRIANGLES, 3, gl.UNSIGNED_BYTE, 0);
 准备四个顶点的顶点数组，还有相对应的索引数组，索引中的值分别对应使用的顶点 index
 
 ```js
-//存储顶点信息的数组
-var positions = [
+// 存储顶点信息的数组
+const positions = [
   30,
   30,
   255,
   0,
   0,
-  1, //V0
+  1, // V0
   30,
   300,
   255,
   0,
   0,
-  1, //V1
+  1, // V1
   300,
   300,
   255,
   0,
   0,
-  1, //V2
+  1, // V2
   300,
   30,
   0,
   255,
   0,
-  1, //V3
-];
-//存储顶点索引的数组
-var indices = [
+  1 // V3
+]
+// 存储顶点索引的数组
+const indices = [
   0,
   1,
-  2, //第一个三角形
+  2, // 第一个三角形
   0,
   2,
-  3, //第二个三角形
-];
+  3 // 第二个三角形
+]
 ```
 
 创建索引数组缓冲区（`gl.ELEMENT_ARRAY_BUFFER`）：
 
 ```js
-const indicesBuffer: WebGLBuffer = gl.createBuffer();
-gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indicesBuffer);
-gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(indices), gl.STATIC_DRAW);
+const indicesBuffer: WebGLBuffer = gl.createBuffer()
+gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indicesBuffer)
+gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(indices), gl.STATIC_DRAW)
 ```
 
 然后绘制
 
 ```js
-gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0);
+gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0)
 ```
 
 ## 三角带绘制矩形
 
 - [源码](https://github.com/YomukiZRJ/study-webgl/tree/main/src/10%E4%B8%89%E8%A7%92%E5%B8%A6%E7%BB%98%E5%88%B6%E7%9F%A9%E5%BD%A2)
 
-<image-box src="http://assets.yomuki.com/md/webgl/Xnip2022-11-14_10-31-34.jpg" />
+<image-box src="webgl/Xnip2022-11-14_10-31-34.jpg" />
 
 准备四个顶点进行绘制，需要注意顶点顺序。第一个三角形的顶点为 v0,v1,v2，第二个三角形的顶点为 v2,v1,v3
 
@@ -144,34 +144,34 @@ positions = [
   255,
   0,
   0,
-  1, //V0
+  1, // V0
   300,
   300,
   255,
   0,
   0,
-  1, //V1
+  1, // V1
   30,
   30,
   255,
   0,
   0,
-  1, //V2
+  1, // V2
   300,
   30,
   0,
   255,
   0,
-  1, //V3
-];
-gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  1 // V3
+]
+gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
 ```
 
 ## 三角扇绘制矩形
 
 - [源码](https://github.com/YomukiZRJ/study-webgl/tree/main/src/11%E4%B8%89%E8%A7%92%E6%89%87%E7%BB%98%E5%88%B6%E7%9F%A9%E5%BD%A2)
 
-<image-box src="http://assets.yomuki.com/md/webgl/Xnip2022-11-14_11-36-51.jpg" />
+<image-box src="webgl/Xnip2022-11-14_11-36-51.jpg" />
 
 需要用 6 个顶点绘制 4 个三角形。v0 点为中心点，向四边衍生四个点，形成 4 个三角形。
 
@@ -182,39 +182,39 @@ positions = [
   255,
   255,
   0,
-  1, //V0
+  1, // V0
   30,
   30,
   255,
   0,
   0,
-  1, //V1
+  1, // V1
   30,
   300,
   255,
   0,
   0,
-  1, //V2
+  1, // V2
   300,
   300,
   255,
   0,
   0,
-  1, //V3
+  1, // V3
   300,
   30,
   0,
   255,
   0,
-  1, //V4
+  1, // V4
   30,
   30,
   255,
   0,
   0,
-  1, //V1
-];
-gl.drawArrays(gl.TRIANGLE_FAN, 0, positions.length / 6);
+  1 // V1
+]
+gl.drawArrays(gl.TRIANGLE_FAN, 0, positions.length / 6)
 ```
 
 ## 三角形绘制圆形
@@ -235,15 +235,15 @@ gl.drawArrays(gl.TRIANGLE_FAN, 0, positions.length / 6);
  * @param {*} radius 半径
  * @param {*} n 三角形数量
  */
-function createCircleVertex(x: number, y: number, radius: number, n: number): [number] {
-  const positions = [x, y, 255, 0, 0, 1];
-  for (let i = 0; i <= n; i++) {
-    const angle = (i * Math.PI * 2) / n;
-    positions.push(x + radius * Math.sin(angle), y + radius * Math.cos(angle), 255, 0, 0, 1);
+function createCircleVertex (x: number, y: number, radius: number, n: number): [number] {
+  const positions = [x, y, 255, 0, 0, 1]
+  for (let i = 0; i <= n; i++){
+    const angle = (i * Math.PI * 2) / n
+    positions.push(x + radius * Math.sin(angle), y + radius * Math.cos(angle), 255, 0, 0, 1)
   }
-  return positions;
+  return positions
 }
-const positions = createCircleVertex(100, 100, 50, 30);
+const positions = createCircleVertex(100, 100, 50, 30)
 ```
 
 ## 三角形绘制圆环
@@ -261,29 +261,29 @@ const positions = createCircleVertex(100, 100, 50, 30);
  * @param {*} innerRadius 内环半径
  * @param {*} n 三角形数量
  */
-function createCircleVertex(x: number, y: number, outerRadius: number, innerRadius: number, n: number): { positions: [number], indices: [number] } {
-  const positions = [];
-  for (let i = 0; i <= n; i++) {
-    const angle = (i * Math.PI * 2) / n;
-    positions.push(x + innerRadius * Math.sin(angle), y + innerRadius * Math.cos(angle), 255, 0, 0, 1);
-    positions.push(x + outerRadius * Math.sin(angle), y + outerRadius * Math.cos(angle), 255, 0, 0, 1);
+function createCircleVertex (x: number, y: number, outerRadius: number, innerRadius: number, n: number): { positions: [number]; indices: [number] } {
+  const positions = []
+  for (let i = 0; i <= n; i++){
+    const angle = (i * Math.PI * 2) / n
+    positions.push(x + innerRadius * Math.sin(angle), y + innerRadius * Math.cos(angle), 255, 0, 0, 1)
+    positions.push(x + outerRadius * Math.sin(angle), y + outerRadius * Math.cos(angle), 255, 0, 0, 1)
   }
-  const indices = [];
-  for (let i = 0; i < n; i++) {
-    const p0 = i * 2;
-    const p1 = i * 2 + 1;
-    let p2 = (i + 1) * 2 + 1;
-    let p3 = (i + 1) * 2;
-    if (i === n - 1) {
-      p2 = 1;
-      p3 = 0;
+  const indices = []
+  for (let i = 0; i < n; i++){
+    const p0 = i * 2
+    const p1 = i * 2 + 1
+    let p2 = (i + 1) * 2 + 1
+    let p3 = (i + 1) * 2
+    if (i === n - 1){
+      p2 = 1
+      p3 = 0
     }
-    indices.push(p0, p1, p2, p2, p3, p0);
+    indices.push(p0, p1, p2, p2, p3, p0)
   }
   return {
     positions,
-    indices,
-  };
+    indices
+  }
 }
-gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_SHORT, 0);
+gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_SHORT, 0)
 ```

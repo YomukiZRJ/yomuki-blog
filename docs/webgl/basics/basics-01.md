@@ -1,6 +1,6 @@
 # WebGL 基础：一个点 & 往着色器传递数据
 
-<image-box src="http://assets.yomuki.com/md/webgl/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png" />
+<image-box src="webgl/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png" />
 
 - [源码-绘制一个点](https://github.com/YomukiZRJ/study-webgl/tree/main/src/01%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E7%82%B9)
 - [源码-交互绘制点](https://github.com/YomukiZRJ/study-webgl/tree/main/src/02%E4%BA%A4%E4%BA%92%E7%BB%98%E5%88%B6%E7%82%B9)
@@ -35,60 +35,60 @@ TypeScript
 
 ```js
 // 获取canvas元素
-const canvas: HTMLCanvasElement = document.querySelector("#canvas");
+const canvas: HTMLCanvasElement = document.querySelector('#canvas')
 // 获取 WebGL 绘图环境
-const gl: WebGLRenderingContext = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+const gl: WebGLRenderingContext = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
 
 /**
  * 创建定点着色器对象
  * 绘制点位位置
  */
 // 获取定点着色器源码
-const vertexShaderSource: string = document.querySelector("#vertexShader").innerHTML;
+const vertexShaderSource: string = document.querySelector('#vertexShader').innerHTML
 // 创建定点着色器对象
-const vertexShader: WebGLShader = gl.createShader(gl.VERTEX_SHADER);
+const vertexShader: WebGLShader = gl.createShader(gl.VERTEX_SHADER)
 // 将源码分配给定点着色器对象
-gl.shaderSource(vertexShader, vertexShaderSource);
+gl.shaderSource(vertexShader, vertexShaderSource)
 // 编译顶点着色器程序
-gl.compileShader(vertexShader);
+gl.compileShader(vertexShader)
 
 /**
  * 创建片元着色器对象
  * 像素着色
  */
 // 获取片元着色器源码
-const fragmentShaderSource: string = document.querySelector("#fragmentShader").innerHTML;
+const fragmentShaderSource: string = document.querySelector('#fragmentShader').innerHTML
 // 创建片元着色器对象
-const fragmentShader: WebGLShader = gl.createShader(gl.FRAGMENT_SHADER);
+const fragmentShader: WebGLShader = gl.createShader(gl.FRAGMENT_SHADER)
 // 将源码分配给片元着色器对象
-gl.shaderSource(fragmentShader, fragmentShaderSource);
+gl.shaderSource(fragmentShader, fragmentShaderSource)
 // 片元着色器编译
-gl.compileShader(fragmentShader);
+gl.compileShader(fragmentShader)
 
 /**
  * 创建着色器程序
  */
 // 创建着色器程序
-const program: WebGLProgram = gl.createProgram();
+const program: WebGLProgram = gl.createProgram()
 // 将顶点着色器挂载在着色器程序上
-gl.attachShader(program, vertexShader);
+gl.attachShader(program, vertexShader)
 // 将片元着色器挂载在着色器程序锁
-gl.attachShader(program, fragmentShader);
+gl.attachShader(program, fragmentShader)
 // 链接着色器程序
-gl.linkProgram(program);
+gl.linkProgram(program)
 
 // 使用刚创建好的着色器程序
-gl.useProgram(program);
+gl.useProgram(program)
 
 /**
  * 开始绘制
  */
 // 设置清空画布颜色为黑色
-gl.clearColor(0.0, 0.0, 0.0, 1.0);
+gl.clearColor(0.0, 0.0, 0.0, 1.0)
 // 用上一步设置的清空画布颜色清空画布。
-gl.clear(gl.COLOR_BUFFER_BIT);
+gl.clear(gl.COLOR_BUFFER_BIT)
 // 绘制点
-gl.drawArrays(gl.POINTS, 0, 1);
+gl.drawArrays(gl.POINTS, 0, 1)
 ```
 
 ## 学习记录
@@ -202,9 +202,9 @@ position = position * vec2(1.0 , -1.0);
 ```
 
 ```js
-const canvas = document.querySelector("#c");
-canvas.width = 400;
-canvas.height = 300;
+const canvas = document.querySelector('#c')
+canvas.width = 400
+canvas.height = 300
 ```
 
 至于设置一个画布的显示大小，如果你没有任何 CSS 影响画布的显示大小，显示大小将是相同的大小作为其绘图缓冲区。因此在上面的两个例子中，画布的绘图缓冲区是 400x300，它的显示大小也是 400x300。

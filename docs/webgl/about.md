@@ -25,7 +25,7 @@ GPU **渲染管线**的主要处理过程如下：
 3. 接下来来到光栅化阶段，光栅化阶段将图形用不包含颜色信息的像素填充。
 4. 在之后进入片元着色器阶段，该阶段为像素着色，并最终显示在屏幕上。
 
-<image-box src="http://assets.yomuki.com/md/GPU%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF.png" />
+<image-box src="md/GPU%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF.png" />
 
 ## 相关术语
 

@@ -4,45 +4,45 @@
 
 - 通过 `BufferGeometry` 和 `BufferAttribute` 创建自定义几何体
   ```js
-  const geometry = new THREE.BufferGeometry(); // 创建一个缓冲几何体
+  const geometry = new THREE.BufferGeometry() // 创建一个缓冲几何体
   // 6个顶点坐标
-  const vertices = new Float32Array([0, 0, 0, 50, 0, 0, 0, 100, 0, 0, 0, 10, 0, 0, 100, 50, 0, 10]);
+  const vertices = new Float32Array([0, 0, 0, 50, 0, 0, 0, 100, 0, 0, 0, 10, 0, 0, 100, 50, 0, 10])
   // 创建属性缓冲区对象，3个为一组（3个表示一个顶点坐标）
-  const attribue = new THREE.BufferAttribute(vertices, 3);
+  const attribue = new THREE.BufferAttribute(vertices, 3)
   // 设置几何体attributes属性的位置属性
-  geometry.setAttribute("position", attribue);
+  geometry.setAttribute('position', attribue)
   ```
   - 添加自定义几何体的网格
     ```js
     const mesh = new THREE.Mesh(
       geometry,
       new THREE.MeshBasicMaterial({
-        color: 0xffff00,
-        side: THREE.DoubleSide, // 两面可见
+        color: 0xFFFF00,
+        side: THREE.DoubleSide // 两面可见
       })
-    );
-    scene.add(mesh);
+    )
+    scene.add(mesh)
     ```
   - 添加自定义几何体的点模型
     ```js
     const points = new THREE.Points(
       geometry,
       new THREE.PointsMaterial({
-        color: 0x0000ff,
-        size: 10.0,
+        color: 0x0000FF,
+        size: 10.0
       })
-    );
-    scene.add(points);
+    )
+    scene.add(points)
     ```
   - 添加自定义几何体的线模型
     ```js
     const line = new THREE.Line(
       geometry,
       new THREE.LineBasicMaterial({
-        color: 0xff0000,
+        color: 0xFF0000
       })
-    );
-    scene.add(line);
+    )
+    scene.add(line)
     ```
 - `.center()` 移动几何体的中心（可以使几何体居中）
 
@@ -52,7 +52,7 @@
 - [SphereGeometry](https://threejs.org/docs/index.html#api/zh/geometries/SphereGeometry) 球体
 
   - `widthSegments`,`heightSegments` 分段数会影响球体的平滑程度，可以用这两个参数来创建不同平整度的“球体”。
-    <image-box src="http://assets.yomuki.com/md/webgl/Xnip2022-11-29_13-47-35.jpg" />
+    <image-box src="webgl/Xnip2022-11-29_13-47-35.jpg" />
   - 可以用`phiStart`,`phiLength`,`thetaStart`,`thetaLength`来创建不完整的球体
 
 - [CylinderGeometry](https://threejs.org/docs/index.html?q=CylinderGeometry#api/zh/geometries/CylinderGeometry) 圆柱体
@@ -77,5 +77,5 @@
 - `uv2`
   - 复制 uv 坐标，用于 aomap
     ```js
-    floor.geometry.setAttribute("uv2", new THREE.BufferAttribute(floor.geometry.attributes.uv.array, 2));
+    floor.geometry.setAttribute('uv2', new THREE.BufferAttribute(floor.geometry.attributes.uv.array, 2))
     ```

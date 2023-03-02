@@ -1,7 +1,7 @@
 # webpack 构建效率优化总结
 
 <image-box
-    src="http://assets.yomuki.com/md/webpackxiaolvyouhua.png"
+    src="webpackxiaolvyouhua.png"
   />
 
 ## 持久化缓存
@@ -17,9 +17,9 @@
 ```js
 module.exports = {
   cache: {
-    type: "filesystem",
-  },
-};
+    type: 'filesystem'
+  }
+}
 ```
 
 ```
@@ -66,9 +66,9 @@ webpack5 自带了，webpack4 需手动安装。
 ```js
 module.exports = {
   module: {
-    noParse: /jquery|lodash|(^vue$)|(^pinia$)|(^vue-router$)/,
-  },
-};
+    noParse: /jquery|lodash|(^vue$)|(^pinia$)|(^vue-router$)/
+  }
+}
 ```
 
 ## [esbuild-loader](https://github.com/privatenumber/esbuild-loader)
@@ -94,11 +94,11 @@ module.exports = {
         //   minifyIdentifiers: false,
         //   minifySyntax: true,
         // },
-        terserOptions: {},
-      }),
-    ],
-  },
-};
+        terserOptions: {}
+      })
+    ]
+  }
+}
 ```
 
 ## 使用 SWC 进行压缩
@@ -112,11 +112,11 @@ module.exports = {
         minify: TerserPlugin.swcMinify,
         // `terserOptions` options will be passed to `swc` (`@swc/core`)
         // Link to options - https://swc.rs/docs/config-js-minify
-        terserOptions: {},
-      }),
-    ],
-  },
-};
+        terserOptions: {}
+      })
+    ]
+  }
+}
 ```
 
 ## [SourceMap](https://webpack.docschina.org/configuration/devtool/#root)
@@ -142,15 +142,15 @@ in webpack5:
 
 ```js
 module.exports = {
-    optimization {
-       removeAvailableModules: false,
-       removeEmptyChunks: false, //
-       splitChunks: false, // 代码分包
-       minimize: false, //代码压缩
-       concatenateModules: false,
-       usedExports: false, // Treeshaking
-  };
-};
+  optimization: {
+    removeAvailableModules: false,
+    removeEmptyChunks: false, //
+    splitChunks: false, // 代码分包
+    minimize: false, // 代码压缩
+    concatenateModules: false,
+    usedExports: false // Treeshaking
+  }
+}
 ```
 
 ## [分模块构建](https://juejin.cn/post/7127098334900125710#heading-12)
@@ -161,9 +161,9 @@ module.exports = {
 
 ```js
 module.exports = {
-  //...
+  // ...
   watchOptions: {
-    ignored: /node_modules/,
-  },
-};
+    ignored: /node_modules/
+  }
+}
 ```

@@ -7,13 +7,13 @@
 #### 开启物理光照 💡
 
 ```js
-renderer.physicallyCorrectLights = true;
+renderer.physicallyCorrectLights = true
 ```
 
 没开
-<image-box assets="webgl/Xnip2023-01-17_16-00-18.jpg" />
+<image-box src="webgl/Xnip2023-01-17_16-00-18.jpg" />
 开了
-<image-box assets="webgl/Xnip2023-01-17_15-59-57.jpg" />
+<image-box src="webgl/Xnip2023-01-17_15-59-57.jpg" />
 
 #### 设置输出编码 💡
 
@@ -22,13 +22,13 @@ renderer.physicallyCorrectLights = true;
 - 渲染器
 
 ```js
-renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.outputEncoding = THREE.sRGBEncoding
 ```
 
 - 纹理（环境纹理）
 
 ```js
-envMapTexture.encoding = THREE.sRGBEncoding;
+envMapTexture.encoding = THREE.sRGBEncoding
 ```
 
 > 由 gltf 引入的模型，所有的贴图都已经自动设置 `sRGBEncoding `了。
@@ -44,9 +44,9 @@ envMapTexture.encoding = THREE.sRGBEncoding;
 - `THREE.ACESFilmicToneMapping`
 
 ```js
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMapping = THREE.ACESFilmicToneMapping
 // 曝光度
-renderer.toneMappingExposure = 3;
+renderer.toneMappingExposure = 3
 ```
 
 #### 开启抗齿距 💡
@@ -54,8 +54,8 @@ renderer.toneMappingExposure = 3;
 ```js
 const renderer = new THREE.WebGLRenderer({
   canvas: canvasEl,
-  antialias: true,
-});
+  antialias: true
+})
 ```
 
 #### 设置阴影 💡
