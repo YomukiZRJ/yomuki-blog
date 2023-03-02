@@ -15,23 +15,23 @@ enum LoginType {
   WeChat,
   TaoBao,
 }
-abstract class LoginHander {
-  abstract handler(): void;
+abstract class LoginHander{
+  abstract handler (): void;
 }
-class WeChatLoginHandler implements LoginHander {
-  handler() {}
+class WeChatLoginHandler implements LoginHander{
+  handler () {}
 }
-class TaoBaoLoginHandler implements LoginHander {
-  handler() {}
+class TaoBaoLoginHandler implements LoginHander{
+  handler () {}
 }
-class Login {
+class Login{
   public static handlerMap: Record<LoginType, LoginHander> = {
     [LoginType.TaoBao]: new TaoBaoLoginHandler(),
-    [LoginType.WeChat]: new WeChatLoginHandler(),
-  };
+    [LoginType.WeChat]: new WeChatLoginHandler()
+  }
 
-  public static handler(type: LoginType) {
-    Login.handlerMap[type].handler();
+  public static handler (type: LoginType) {
+    Login.handlerMap[type].handler()
   }
 }
 ```
