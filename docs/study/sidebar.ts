@@ -31,6 +31,10 @@ export default [
       {
         text: '类型层级',
         link: '/study/ts/类型层级'
+      },
+      {
+        text: '逻辑运算',
+        link: '/study/ts/逻辑运算'
       }
     ]
   },
