@@ -21,6 +21,10 @@ export default [
     // collapsed: true,
     items: [
       {
+        text: '指令',
+        link: '/study/ts/ts指令'
+      },
+      {
         text: '类型',
         link: '/study/ts/类型'
       },
@@ -35,6 +39,14 @@ export default [
       {
         text: '逻辑运算',
         link: '/study/ts/逻辑运算'
+      },
+      {
+        text: '内置工具类型',
+        link: '/study/ts/内置工具类型'
+      },
+      {
+        text: '工具类型拓展',
+        link: '/study/ts/工具类型拓展'
       }
     ]
   },
