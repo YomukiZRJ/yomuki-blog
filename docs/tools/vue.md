@@ -66,3 +66,4 @@
 ## 其他
 
 - vue-resource 发送 jsonp
+- [vue-i18n](https://www.npmjs.com/package/vue-i18n)
