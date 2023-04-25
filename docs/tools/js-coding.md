@@ -68,6 +68,7 @@
 - [Greensock](https://github.com/greensock/GreenSock-JS/) 用于创建高性能，零依赖性，跨浏览器动画
 - [Popmotion](https://github.com/Popmotion/popmotion) 只有 12kb
 - [watching-you](https://github.com/jj811208/watching-you) 元素注视着用户
+- [tsparticles-engine](https://www.npmjs.com/package/tsparticles-engine) 粒子动画库。有框架组件。
 
 ## 图片动画 - 生成
 

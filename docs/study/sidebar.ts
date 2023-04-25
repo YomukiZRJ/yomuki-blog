@@ -12,6 +12,10 @@ export default [
       {
         text: '好文收集',
         link: '/study/article'
+      },
+      {
+        text: 'SSE',
+        link: '/study/base/see'
       }
     ]
   },
