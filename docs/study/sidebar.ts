@@ -16,6 +16,10 @@ export default [
       {
         text: 'SSE',
         link: '/study/base/see'
+      },
+      {
+        text: '依赖注入模式',
+        link: '/study/base/依赖注入模式'
       }
     ]
   },
