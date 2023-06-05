@@ -25,3 +25,13 @@
 插件多
 
 ### 5. [**CKEditor 5**](https://github.com/ckeditor/ckeditor5)
+
+### 6. [@hufe921/canvas-editor](https://github.com/Hufe921/canvas-editor)
+
+类似于 word 的富文本编辑器
+
+## 白板
+
+### [excalidraw](https://github.com/excalidraw/excalidraw)
+
+创建精美的手绘图，如图表、线框或您喜欢的任何内容。
